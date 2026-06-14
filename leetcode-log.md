@@ -64,3 +64,23 @@
 ### ### Update Contains Duplicate log
 
 
+### 3. Valid Anagram
+
+- Link: https://leetcode.com/problems/valid-anagram/
+- Topic: String, Sorting, Hash Table
+- Độ khó: Easy
+- Ngày làm: 2026-06-14
+- Trạng thái: Solved
+- Ý tưởng:
+  - Cách 1: Sort hai chuỗi rồi so sánh. Nếu sau khi sort mà s == t thì là anagram.
+  - Cách 2: Dùng mảng count[26], gặp ký tự trong s thì +1, gặp ký tự trong t thì -1. Cuối cùng nếu tất cả bằng 0 thì là anagram.
+- Lỗi sai:
+  - Ban đầu hiểu sai cách dùng compare(): s.compare(t) == 0 mới nghĩa là hai chuỗi giống nhau.
+  - Không nên return false ngay khi gặp một ký tự chưa khớp nếu chưa kiểm tra hết.
+- Pattern: Sorting / Frequency Array
+- Độ phức tạp:
+  - Cách sort: Time O(n log n), Space O(1) hoặc O(log n)
+  - Cách count[26]: Time O(n), Space O(1)
+- Ngày cần làm lại: 2026-06-17
+
+
