@@ -22,7 +22,7 @@
 ## Template ghi bài
 
 ```text
-## Tên bài:
+### Tên bài:
 - Link:
 - Topic:
 - Độ khó:
@@ -34,7 +34,7 @@
 - Độ phức tạp:
 - Ngày cần làm lại:
 
-## 1. Two Sum
+### 1. Two Sum
 
 - Link: https://leetcode.com/problems/two-sum/
 - Topic: Array, Hash Table
@@ -83,7 +83,7 @@
 - Ngày cần làm lại: 2026-06-17
 
 
-## 4. Move Zeroes
+### 4. Move Zeroes
 
 - Link: https://leetcode.com/problems/move-zeroes/
 - Topic: Array, Two Pointers
