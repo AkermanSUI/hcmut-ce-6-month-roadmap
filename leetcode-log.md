@@ -33,7 +33,7 @@
 - Pattern:
 - Độ phức tạp:
 - Ngày cần làm lại:
----
+ ```
 ## 2026-06-13
 ### 1. Two Sum
 
