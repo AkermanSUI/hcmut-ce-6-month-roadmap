@@ -46,7 +46,7 @@
 - Pattern: Brute Force / Nested Loop
 - Độ phức tạp: O(n^2) time, O(1) memory
 - Ngày cần làm lại: 2026-06-16
-### ### Update Two Sum log
+  Update Two Sum log
 
 
 ### 2. Contains Duplicate
