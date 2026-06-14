@@ -47,3 +47,20 @@
 - Độ phức tạp: O(n^2) time, O(1) memory
 - Ngày cần làm lại: 2026-06-16
 ### ### Update Two Sum log
+
+
+### 2. Contains Duplicate
+
+- Link: https://leetcode.com/problems/contains-duplicate/
+- Topic: Array, Hash Table, Sorting
+- Độ khó: Easy
+- Ngày làm: 2026-06-14
+- Trạng thái: Solved
+- Ý tưởng: Sort mảng tăng dần, sau đó kiểm tra hai phần tử kề nhau. Nếu nums[i] == nums[i + 1] thì có duplicate.
+- Lỗi sai: Ban đầu nghĩ dùng hai vòng for để so từng cặp nhưng dễ bị Time Limit Exceeded vì O(n^2).
+- Pattern: Sorting + Adjacent Check
+- Độ phức tạp: Time O(n log n), Space O(1) hoặc O(log n)
+- Ngày cần làm lại: 2026-06-17
+### ### Update Contains Duplicate log
+
+
