@@ -33,3 +33,17 @@
 - Pattern:
 - Độ phức tạp:
 - Ngày cần làm lại:
+
+### 1. Two Sum
+
+- Link: https://leetcode.com/problems/two-sum/
+- Topic: Array, Hash Table
+- Độ khó: Easy
+- Ngày làm: 2026-06-13
+- Trạng thái: Solved
+- Ý tưởng: Duyệt từng cặp i, j. Nếu nums[i] + nums[j] == target thì return {i, j}.
+- Lỗi sai: Ban đầu nhầm return i,j; và chưa hiểu LeetCode không cần main/cout.
+- Pattern: Brute Force / Nested Loop
+- Độ phức tạp: O(n^2) time, O(1) memory
+- Ngày cần làm lại: 2026-06-16
+### ### Update Two Sum log
