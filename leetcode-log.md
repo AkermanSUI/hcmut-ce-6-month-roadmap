@@ -84,3 +84,24 @@
 - Ngày cần làm lại: 2026-06-17
 
 
+### 4. Move Zeroes
+
+- Link: https://leetcode.com/problems/move-zeroes/
+- Topic: Array, Two Pointers
+- Độ khó: Easy
+- Ngày làm: 2026-06-14
+- Trạng thái: Solved
+- Ý tưởng:
+  - Cách 1: Tạo vector nonZero để lưu số khác 0, vector zeroes để lưu số 0.
+  - Sau đó nối zeroes vào cuối nonZero rồi gán lại nums = nonZero.
+- Lỗi sai:
+  - Ban đầu nhầm nums[i] == '0' thay vì nums[i] == 0.
+  - Ban đầu khởi tạo vector<int> newNum = {0}, làm dư số 0.
+  - Ban đầu cout vector trực tiếp, nhưng LeetCode chỉ cần sửa nums, không cần cout.
+- Pattern: Extra Array / Two Pointers
+- Độ phức tạp:
+  - Cách vector phụ: Time O(n), Space O(n)
+  - Cách tối ưu two pointers: Time O(n), Space O(1)
+- Ngày cần làm lại: 2026-06-17
+
+
