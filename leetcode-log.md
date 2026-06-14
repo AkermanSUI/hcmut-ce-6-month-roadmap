@@ -46,7 +46,6 @@
 - Pattern: Brute Force / Nested Loop
 - Độ phức tạp: O(n^2) time, O(1) memory
 - Ngày cần làm lại: 2026-06-16
-  Update Two Sum log
 
 
 ### 2. Contains Duplicate
@@ -61,7 +60,7 @@
 - Pattern: Sorting + Adjacent Check
 - Độ phức tạp: Time O(n log n), Space O(1) hoặc O(log n)
 - Ngày cần làm lại: 2026-06-17
-### ### Update Contains Duplicate log
+
 
 
 ### 3. Valid Anagram
