@@ -121,3 +121,17 @@
 - Độ phức tạp: Time O(n), Space O(1)
 - Ngày cần làm lại: 2026-06-18
 
+### 6. Merge Sorted Array
+
+- Link: https://leetcode.com/problems/merge-sorted-array/
+- Topic: Array, Two Pointers, Sorting
+- Độ khó: Easy
+- Ngày làm: 2026-06-15
+- Trạng thái: Solved
+- Ý tưởng ban đầu: Chép nums2 vào phần trống cuối nums1, sau đó sort lại nums1.
+- Lỗi sai / điểm cần cải thiện: Cách này pass nhưng chưa tận dụng việc nums1 và nums2 đã được sort sẵn.
+- Pattern: Merge / Two Pointers from End
+- Độ phức tạp:
+  - Cách sort lại: Time O((m+n) log(m+n)), Space tùy sort
+  - Cách tối ưu: Time O(m+n), Space O(1)
+- Ngày cần làm lại: 2026-06-18
