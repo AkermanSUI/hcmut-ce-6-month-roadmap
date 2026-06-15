@@ -47,6 +47,8 @@
 - Pattern: Brute Force / Nested Loop
 - Độ phức tạp: O(n^2) time, O(1) memory
 - Ngày cần làm lại: 2026-06-16
+- - Cách tối ưu: Dùng unordered_map lưu value -> index. Với mỗi nums[i], tìm need = target - nums[i]. Nếu need đã tồn tại trong map thì return {mp[need], i}.
+- Độ phức tạp tối ưu: Time O(n), Space O(n)
 
 
 ### 2. Contains Duplicate
@@ -61,6 +63,8 @@
 - Pattern: Sorting + Adjacent Check
 - Độ phức tạp: Time O(n log n), Space O(1) hoặc O(log n)
 - Ngày cần làm lại: 2026-06-17
+- Cách tối ưu: Dùng unordered_set để lưu các số đã gặp. Nếu gặp lại số đã có trong set thì return true.
+- Độ phức tạp tối ưu: Time O(n), Space O(n)
 
 
 ## 2026-06-14
@@ -104,4 +108,16 @@
   - Cách tối ưu two pointers: Time O(n), Space O(1)
 - Ngày cần làm lại: 2026-06-17
 
+### 5. Best Time to Buy and Sell Stock
+
+- Link: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+- Topic: Array, Dynamic Programming
+- Độ khó: Easy
+- Ngày làm: 2026-06-15
+- Trạng thái: Solved
+- Ý tưởng: Duyệt mảng một lần, luôn lưu giá mua thấp nhất đã gặp bằng minPrice. Với mỗi ngày, tính profit = prices[i] - minPrice rồi cập nhật maxProfit.
+- Lỗi sai: Ban đầu dùng hai vòng for để xét mọi cặp mua-bán nên bị Time Limit Exceeded vì O(n^2).
+- Pattern: One Pass / Track Minimum
+- Độ phức tạp: Time O(n), Space O(1)
+- Ngày cần làm lại: 2026-06-18
 
