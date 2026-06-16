@@ -38,3 +38,25 @@
 - Valid Palindrome
 - Plus One
 - Remove Duplicates from Sorted Array
+
+
+## 2026-06-17 - Review Hash Table + Two Pointers
+
+### Nội dung đã hoàn thành
+- Ôn lại Two Sum bằng unordered_map
+- Ôn lại Contains Duplicate bằng unordered_set
+- Ôn Valid Anagram bằng count[26]
+- Ôn Move Zeroes bằng two pointers in-place
+- Học khái niệm hash table, hash function, key-value, collision
+
+### Kiến thức cần nhớ
+- unordered_set dùng để kiểm tra phần tử đã xuất hiện chưa
+- unordered_map dùng để lưu key -> value
+- Hash table giúp tra cứu trung bình O(1)
+- Với bài duplicate/intersection/frequency/pair sum, nên nghĩ tới hash table
+- Với bài cần sửa trực tiếp vector, chú ý in-place và dấu &
+
+### Điểm đã tiến bộ
+- Không còn chỉ nghĩ brute force
+- Bắt đầu biết nhìn pattern: Hash Table, Two Pointers, One Pass
+- Biết phân biệt pass được và tối ưu đúng ý đề
