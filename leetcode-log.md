@@ -178,3 +178,23 @@
 - Pattern: In-place / Slow-Fast Pointers
 - Độ phức tạp: Time O(n), Space O(1)
 - Ngày cần làm lại: 2026-06-19
+
+## 2026-06-17 - Review Hash Table + Two Pointers
+
+### Bài đã làm lại
+- Two Sum: unordered_map, Time O(n), Space O(n)
+- Contains Duplicate: unordered_set, Time O(n), Space O(n)
+- Valid Anagram: count[26], Time O(n), Space O(1)
+- Move Zeroes: two pointers in-place, Time O(n), Space O(1)
+
+### Kiến thức củng cố
+- unordered_map dùng cho key -> value
+- unordered_set dùng để kiểm tra đã xuất hiện chưa
+- count[26] dùng khi chuỗi chỉ gồm a-z
+- two pointers giúp sửa mảng in-place
+- check trước rồi insert sau trong bài duplicate/two sum
+
+### Điểm cần nhớ
+- LeetCode không cần main/cout
+- Hàm void thì sửa trực tiếp vector tham chiếu
+- Hàm trả vector thì return vector
