@@ -151,7 +151,7 @@
 - Cách tối ưu sau này: Dùng two pointers trực tiếp trên chuỗi gốc để đạt Space O(1).
 - Ngày cần làm lại: 2026-06-18
 
-
+## 2026-06-15
 ### 8. Plus One
 
 - Link: https://leetcode.com/problems/plus-one/
@@ -163,4 +163,18 @@
 - Lỗi sai: Ban đầu xử lý trường hợp toàn số 9 bằng cách gán digits[0] = 1 nhưng thiếu thêm một phần tử mới; cũng có nguy cơ truy cập vượt biên digits[a].
 - Pattern: Reverse Traversal / Carry
 - Độ phức tạp: Time O(n), Space O(1) nếu không tính output
+- Ngày cần làm lại: 2026-06-19
+
+
+### 9. Remove Duplicates from Sorted Array
+
+- Link: https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+- Topic: Array, Two Pointers
+- Độ khó: Easy
+- Ngày làm: 2026-06-16
+- Trạng thái: Solved
+- Ý tưởng: Vì mảng đã sort, các phần tử trùng nhau nằm cạnh nhau. Dùng k làm vị trí đặt phần tử unique tiếp theo. Nếu nums[i] != nums[i - 1] thì gán nums[k] = nums[i], rồi tăng k.
+- Lỗi sai: Ban đầu thắc mắc vì sao phần dư cuối mảng vẫn còn mà vẫn pass; hiểu ra LeetCode chỉ kiểm tra k phần tử đầu tiên.
+- Pattern: In-place / Slow-Fast Pointers
+- Độ phức tạp: Time O(n), Space O(1)
 - Ngày cần làm lại: 2026-06-19
