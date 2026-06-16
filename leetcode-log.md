@@ -135,3 +135,32 @@
   - Cách sort lại: Time O((m+n) log(m+n)), Space tùy sort
   - Cách tối ưu: Time O(m+n), Space O(1)
 - Ngày cần làm lại: 2026-06-18
+
+
+### 7. Valid Palindrome
+
+- Link: https://leetcode.com/problems/valid-palindrome/
+- Topic: Two Pointers, String
+- Độ khó: Easy
+- Ngày làm: 2026-06-15
+- Trạng thái: Solved
+- Ý tưởng: Tạo string mới sNew, chỉ giữ lại chữ cái/chữ số bằng isalnum(), chuyển về chữ thường bằng tolower(), sau đó dùng hai con trỏ left/right để kiểm tra palindrome.
+- Lỗi sai: Chưa có lỗi lớn; cần nhớ isalnum() để lọc ký tự hợp lệ và tolower() để chuẩn hóa chữ hoa/thường.
+- Pattern: Clean String + Two Pointers
+- Độ phức tạp: Time O(n), Space O(n)
+- Cách tối ưu sau này: Dùng two pointers trực tiếp trên chuỗi gốc để đạt Space O(1).
+- Ngày cần làm lại: 2026-06-18
+
+
+### 8. Plus One
+
+- Link: https://leetcode.com/problems/plus-one/
+- Topic: Array, Math
+- Độ khó: Easy
+- Ngày làm: 2026-06-16
+- Trạng thái: Solved
+- Ý tưởng: Duyệt từ cuối vector về đầu. Nếu gặp chữ số nhỏ hơn 9 thì cộng 1 và return. Nếu gặp 9 thì đổi thành 0 và tiếp tục carry sang trái. Nếu toàn bộ là 9 thì chèn 1 vào đầu.
+- Lỗi sai: Ban đầu xử lý trường hợp toàn số 9 bằng cách gán digits[0] = 1 nhưng thiếu thêm một phần tử mới; cũng có nguy cơ truy cập vượt biên digits[a].
+- Pattern: Reverse Traversal / Carry
+- Độ phức tạp: Time O(n), Space O(1) nếu không tính output
+- Ngày cần làm lại: 2026-06-19
