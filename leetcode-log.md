@@ -198,3 +198,46 @@
 - LeetCode không cần main/cout
 - Hàm void thì sửa trực tiếp vector tham chiếu
 - Hàm trả vector thì return vector
+
+
+
+## 2026-06-18
+
+### 10. Running Sum of 1d Array
+
+- Link: https://leetcode.com/problems/running-sum-of-1d-array/
+- Topic: Array, Prefix Sum
+- Độ khó: Easy
+- Ngày làm: 2026-06-18
+- Trạng thái: Solved
+- Ý tưởng: Duyệt từ trái sang phải, mỗi phần tử mới bằng tổng các phần tử từ đầu đến vị trí hiện tại. Có thể tạo vector mới hoặc sửa trực tiếp nums.
+- Lỗi sai:
+- Pattern: Prefix Sum / In-place
+- Độ phức tạp: Time O(n), Space O(1) nếu sửa trực tiếp
+- Ngày cần làm lại: 2026-06-21
+
+### 11. Find Pivot Index
+
+- Link: https://leetcode.com/problems/find-pivot-index/
+- Topic: Array, Prefix Sum
+- Độ khó: Easy
+- Ngày làm: 2026-06-18
+- Trạng thái: Solved
+- Ý tưởng: Tính total sum của mảng. Khi duyệt từng index i, rightSum = total - leftSum - nums[i]. Nếu leftSum == rightSum thì return i. Sau đó cập nhật leftSum += nums[i].
+- Lỗi sai:
+- Pattern: Prefix Sum / Left Sum - Right Sum
+- Độ phức tạp: Time O(n), Space O(1)
+- Ngày cần làm lại: 2026-06-21
+
+### 12. Maximum Average Subarray I
+
+- Link: https://leetcode.com/problems/maximum-average-subarray-i/
+- Topic: Array, Sliding Window
+- Độ khó: Easy
+- Ngày làm: 2026-06-18
+- Trạng thái: Solved
+- Ý tưởng: Tính tổng cửa sổ đầu tiên độ dài k. Sau đó trượt cửa sổ bằng cách trừ phần tử rời khỏi cửa sổ và cộng phần tử mới đi vào. Cập nhật maxSum.
+- Lỗi sai:
+- Pattern: Fixed-size Sliding Window
+- Độ phức tạp: Time O(n), Space O(1)
+- Ngày cần làm lại: 2026-06-21
