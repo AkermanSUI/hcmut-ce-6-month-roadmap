@@ -241,3 +241,32 @@
 - Pattern: Fixed-size Sliding Window
 - Độ phức tạp: Time O(n), Space O(1)
 - Ngày cần làm lại: 2026-06-21
+
+
+## 2026-06-19
+
+### 13. Maximum Average Subarray I
+
+- Link: https://leetcode.com/problems/maximum-average-subarray-i/
+- Topic: Array, Sliding Window
+- Độ khó: Easy
+- Ngày làm: 2026-06-19
+- Trạng thái: Solved
+- Ý tưởng: Tính tổng cửa sổ đầu tiên độ dài k. Sau đó trượt cửa sổ bằng cách trừ phần tử rời khỏi cửa sổ nums[i-k] và cộng phần tử mới nums[i]. Cập nhật maxSum.
+- Lỗi sai:
+- Pattern: Fixed-size Sliding Window
+- Độ phức tạp: Time O(n), Space O(1)
+- Ngày cần làm lại: 2026-06-22
+
+### 14. Max Consecutive Ones
+
+- Link: https://leetcode.com/problems/max-consecutive-ones/
+- Topic: Array, Counting
+- Độ khó: Easy
+- Ngày làm: 2026-06-19
+- Trạng thái: Solved
+- Ý tưởng: Duyệt mảng, nếu gặp 1 thì tăng count và cập nhật maxCount. Nếu gặp 0 thì reset count về 0.
+- Lỗi sai:
+- Pattern: Consecutive Counting / One Pass
+- Độ phức tạp: Time O(n), Space O(1)
+- Ngày cần làm lại: 2026-06-22
