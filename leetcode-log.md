@@ -270,3 +270,44 @@
 - Pattern: Consecutive Counting / One Pass
 - Độ phức tạp: Time O(n), Space O(1)
 - Ngày cần làm lại: 2026-06-22
+
+## 2026-06-20
+
+### 15. Length of Last Word
+
+- Link: https://leetcode.com/problems/length-of-last-word/
+- Topic: String
+- Độ khó: Easy
+- Ngày làm: 2026-06-20
+- Trạng thái: Solved
+- Ý tưởng: Duyệt từ cuối chuỗi, bỏ qua khoảng trắng cuối, sau đó đếm độ dài từ cuối cùng cho đến khi gặp khoảng trắng.
+- Lỗi sai:
+- Pattern: Reverse String Traversal
+- Độ phức tạp: Time O(n), Space O(1)
+- Ngày cần làm lại: 2026-06-23
+
+### 16. Reverse String
+
+- Link: https://leetcode.com/problems/reverse-string/
+- Topic: Two Pointers, String
+- Độ khó: Easy
+- Ngày làm: 2026-06-20
+- Trạng thái: Solved
+- Ý tưởng: Dùng left ở đầu, right ở cuối, swap hai ký tự rồi left++, right-- cho đến khi gặp nhau.
+- Lỗi sai:
+- Pattern: Two Pointers / In-place Swap
+- Độ phức tạp: Time O(n), Space O(1)
+- Ngày cần làm lại: 2026-06-23
+
+### 17. Reverse Vowels of a String
+
+- Link: https://leetcode.com/problems/reverse-vowels-of-a-string/
+- Topic: Two Pointers, String
+- Độ khó: Easy
+- Ngày làm: 2026-06-20
+- Trạng thái: Solved
+- Ý tưởng: Dùng two pointers, bỏ qua ký tự không phải nguyên âm ở hai đầu. Khi cả hai đầu đều là nguyên âm thì swap.
+- Lỗi sai:
+- Pattern: Two Pointers / Character Filtering
+- Độ phức tạp: Time O(n), Space O(1)
+- Ngày cần làm lại: 2026-06-23
