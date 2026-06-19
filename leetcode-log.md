@@ -339,3 +339,31 @@
 - Pattern: Pointer Reversal
 - Độ phức tạp: Time O(n), Space O(1)
 - Ngày cần làm lại: 2026-06-25
+
+## 2026-06-23
+
+### 20. Linked List Cycle
+
+- Link: https://leetcode.com/problems/linked-list-cycle/
+- Topic: Linked List, Two Pointers
+- Độ khó: Easy
+- Ngày làm: 2026-06-23
+- Trạng thái: Solved
+- Ý tưởng: Dùng slow đi 1 bước, fast đi 2 bước. Nếu linked list có cycle thì slow và fast sẽ gặp nhau. Nếu không có cycle thì fast sẽ chạm nullptr.
+- Lỗi sai:
+- Pattern: Floyd Cycle Detection / Slow-Fast Pointers
+- Độ phức tạp: Time O(n), Space O(1)
+- Ngày cần làm lại: 2026-06-26
+
+### 21. Merge Two Sorted Lists
+
+- Link: https://leetcode.com/problems/merge-two-sorted-lists/
+- Topic: Linked List, Recursion
+- Độ khó: Easy
+- Ngày làm: 2026-06-23
+- Trạng thái: Solved
+- Ý tưởng: Dùng dummy node và tail để xây list kết quả. So sánh list1->val và list2->val, nối node nhỏ hơn vào tail, rồi dịch con trỏ tương ứng.
+- Lỗi sai:
+- Pattern: Dummy Node / Merge
+- Độ phức tạp: Time O(n + m), Space O(1)
+- Ngày cần làm lại: 2026-06-26
