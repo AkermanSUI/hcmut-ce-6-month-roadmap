@@ -311,3 +311,31 @@
 - Pattern: Two Pointers / Character Filtering
 - Độ phức tạp: Time O(n), Space O(1)
 - Ngày cần làm lại: 2026-06-23
+
+## 2026-06-22
+
+### 18. Middle of the Linked List
+
+- Link: https://leetcode.com/problems/middle-of-the-linked-list/
+- Topic: Linked List, Two Pointers
+- Độ khó: Easy
+- Ngày làm: 2026-06-22
+- Trạng thái: Solved
+- Ý tưởng: Dùng slow đi 1 bước, fast đi 2 bước. Khi fast đi hết list thì slow nằm ở giữa.
+- Lỗi sai / điểm cần nhớ: Phải check `fast != nullptr && fast->next != nullptr` để tránh truy cập `fast->next` khi fast đã rỗng.
+- Pattern: Slow-Fast Pointers
+- Độ phức tạp: Time O(n), Space O(1)
+- Ngày cần làm lại: 2026-06-25
+
+### 19. Reverse Linked List
+
+- Link: https://leetcode.com/problems/reverse-linked-list/
+- Topic: Linked List
+- Độ khó: Easy
+- Ngày làm: 2026-06-22
+- Trạng thái: Solved
+- Ý tưởng: Dùng 3 con trỏ `prev`, `cur`, `nextNode`. Mỗi vòng lưu node tiếp theo, bẻ `cur->next` về `prev`, rồi dời `prev` và `cur` tiến lên.
+- Lỗi sai / điểm cần nhớ: Phải lưu `nextNode = cur->next` trước khi bẻ mũi tên, nếu không sẽ mất phần còn lại của list.
+- Pattern: Pointer Reversal
+- Độ phức tạp: Time O(n), Space O(1)
+- Ngày cần làm lại: 2026-06-25
