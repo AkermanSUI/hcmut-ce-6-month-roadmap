@@ -396,3 +396,34 @@
 - Pattern: Stack Simulation
 - Độ phức tạp: Time O(n), Space O(n)
 - Ngày cần làm lại: 2026-06-27
+
+
+## 2026-06-25
+
+### 24. Number of Recent Calls
+
+- Link: https://leetcode.com/problems/number-of-recent-calls/
+- Topic: Queue, Design
+- Độ khó: Easy
+- Ngày làm: 2026-06-25
+- Trạng thái: Solved
+- Dịch đề: Mỗi lần gọi `ping(t)` là có một request mới tại thời điểm `t`. Trả về số request nằm trong khoảng từ `t - 3000` đến `t`.
+- Ý tưởng: Dùng queue lưu thời điểm request. Mỗi lần ping thì push `t`, sau đó pop các request quá cũ ở đầu queue.
+- Lỗi sai / điểm cần nhớ: Request nghĩa là một lần gọi `ping(t)`. `q.front() < t - 3000` nghĩa là request đó đã nằm ngoài 3000ms gần nhất.
+- Pattern: Sliding Window with Queue
+- Độ phức tạp: Time O(n) tổng thể, mỗi phần tử vào/ra queue một lần; Space O(n)
+- Ngày cần làm lại: 2026-06-28
+
+### 25. Implement Queue using Stacks
+
+- Link: https://leetcode.com/problems/implement-queue-using-stacks/
+- Topic: Stack, Queue, Design
+- Độ khó: Easy
+- Ngày làm: 2026-06-25
+- Trạng thái: Solved
+- Dịch đề: Tự xây dựng một queue có các hàm `push`, `pop`, `peek`, `empty`, nhưng chỉ được dùng stack.
+- Ý tưởng: Dùng hai stack `in` và `out`. `in` nhận phần tử mới. Khi cần lấy phần tử đầu queue mà `out` rỗng, chuyển toàn bộ từ `in` sang `out` để đảo thứ tự.
+- Lỗi sai / điểm cần nhớ: Queue là vào trước ra trước, stack là vào sau ra trước. Hai stack giúp đảo thứ tự hai lần để lấy đúng phần tử vào đầu tiên.
+- Pattern: Two Stacks
+- Độ phức tạp: Amortized O(1) cho mỗi thao tác; Space O(n)
+- Ngày cần làm lại: 2026-06-28
