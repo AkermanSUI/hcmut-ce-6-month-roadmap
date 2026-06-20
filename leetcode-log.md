@@ -367,3 +367,32 @@
 - Pattern: Dummy Node / Merge
 - Độ phức tạp: Time O(n + m), Space O(1)
 - Ngày cần làm lại: 2026-06-26
+
+
+## 2026-06-24
+
+### 22. Valid Parentheses
+
+- Link: https://leetcode.com/problems/valid-parentheses/
+- Topic: Stack, String
+- Độ khó: Easy
+- Ngày làm: 2026-06-24
+- Trạng thái: Solved
+- Ý tưởng: Gặp ngoặc mở thì push vào stack. Gặp ngoặc đóng thì kiểm tra stack có rỗng không, sau đó so sánh với ngoặc mở tương ứng ở top. Nếu khớp thì pop. Cuối cùng stack phải rỗng.
+- Lỗi sai / điểm cần nhớ: Ban đầu check nhầm `s.empty()` thay vì `st.empty()`. Trước khi gọi `st.top()` phải chắc chắn stack không rỗng.
+- Pattern: Stack Matching
+- Độ phức tạp: Time O(n), Space O(n)
+- Ngày cần làm lại: 2026-06-27
+
+### 23. Baseball Game
+
+- Link: https://leetcode.com/problems/baseball-game/
+- Topic: Stack, Simulation
+- Độ khó: Easy
+- Ngày làm: 2026-06-24
+- Trạng thái: Solved
+- Ý tưởng: Dùng vector như stack để lưu điểm hợp lệ. Số thì thêm vào, `C` thì xóa điểm trước, `D` thì thêm gấp đôi điểm trước, `+` thì thêm tổng hai điểm trước.
+- Lỗi sai / điểm cần nhớ: `stoi(op)` dùng để chuyển string thành int, ví dụ `"5"` thành `5`.
+- Pattern: Stack Simulation
+- Độ phức tạp: Time O(n), Space O(n)
+- Ngày cần làm lại: 2026-06-27
