@@ -471,3 +471,33 @@
 - Pattern: Stack Cancellation
 - Độ phức tạp: Time O(n), Space O(n)
 - Ngày cần làm lại: 2026-06-30
+
+## 2026-06-29
+
+### 30. Binary Search
+
+- Link: https://leetcode.com/problems/binary-search/
+- Topic: Binary Search, Array
+- Độ khó: Easy
+- Ngày làm: 2026-06-29
+- Trạng thái: Solved
+- Dịch đề: Cho mảng `nums` đã sắp xếp tăng dần và số `target`. Nếu `target` có trong mảng thì trả về index, nếu không thì trả về `-1`.
+- Ý tưởng: Dùng hai biến `left` và `right`, mỗi lần lấy `mid`. Nếu `nums[mid]` nhỏ hơn target thì tìm bên phải, nếu lớn hơn target thì tìm bên trái.
+- Lỗi sai / điểm cần nhớ: Không dùng `left = mid++`. Phải dùng `left = mid + 1` để vùng tìm kiếm thật sự nhỏ lại, tránh Time Limit Exceeded.
+- Pattern: Binary Search
+- Độ phức tạp: Time O(log n), Space O(1)
+- Ngày cần làm lại: 2026-07-02
+
+### 31. Search Insert Position
+
+- Link: https://leetcode.com/problems/search-insert-position/
+- Topic: Binary Search, Array
+- Độ khó: Easy
+- Ngày làm: 2026-06-29
+- Trạng thái: Solved
+- Dịch đề: Cho mảng `nums` đã sắp xếp tăng dần và số `target`. Nếu target có trong mảng thì trả về index, nếu không thì trả về vị trí nên chèn target vào để mảng vẫn tăng dần.
+- Ý tưởng: Dùng Binary Search. Nếu tìm thấy thì trả về `mid`. Nếu không tìm thấy, sau vòng lặp `left` chính là vị trí cần chèn.
+- Lỗi sai / điểm cần nhớ: Khi target nhỏ hơn `nums[mid]`, nên dùng `right = mid - 1`, không phải `right = right - 1`.
+- Pattern: Binary Search Insert Position
+- Độ phức tạp: Time O(log n), Space O(1)
+- Ngày cần làm lại: 2026-07-02
