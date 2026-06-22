@@ -441,3 +441,33 @@
 - Pattern: Stack Cancellation
 - Độ phức tạp: Time O(n), Space O(n)
 - Ngày cần làm lại: 2026-06-29
+
+## 2026-06-27
+
+### 28. Min Stack
+
+- Link: https://leetcode.com/problems/min-stack/
+- Topic: Stack, Design
+- Độ khó: Medium
+- Ngày làm: 2026-06-27
+- Trạng thái: Solved
+- Dịch đề: Thiết kế stack có các hàm push, pop, top và getMin. Hàm getMin phải trả về phần tử nhỏ nhất trong stack một cách nhanh.
+- Ý tưởng: Dùng hai stack. Stack chính lưu toàn bộ giá trị. Stack phụ `minSt` lưu các giá trị nhỏ nhất theo từng thời điểm.
+- Lỗi sai / điểm cần nhớ: Dùng `<=` khi push vào `minSt` để xử lý trường hợp có nhiều phần tử nhỏ nhất giống nhau. Có thể dùng `vector<int>` như stack để code gọn và runtime ổn hơn.
+- Pattern: Auxiliary Stack
+- Độ phức tạp: Time O(1) cho mỗi thao tác, Space O(n)
+- Ngày cần làm lại: 2026-06-30
+
+### 29. Make The String Great
+
+- Link: https://leetcode.com/problems/make-the-string-great/
+- Topic: Stack, String
+- Độ khó: Easy
+- Ngày làm: 2026-06-27
+- Trạng thái: Solved
+- Dịch đề: Cho chuỗi `s`, nếu có hai ký tự cạnh nhau là cùng một chữ cái nhưng khác hoa/thường thì xóa cả hai. Lặp lại đến khi không còn cặp như vậy.
+- Ý tưởng: Dùng `string res` như stack. Nếu ký tự hiện tại và ký tự cuối của `res` lệch nhau 32 trong bảng ASCII thì xóa ký tự cuối, ngược lại thì thêm ký tự hiện tại.
+- Lỗi sai / điểm cần nhớ: `string` không có `.top()`, phải dùng `.back()`. Ngoài ra cần viết đúng `abs(res.back() - c) == 32`, không phải `abs(res.back() - c == 32)`.
+- Pattern: Stack Cancellation
+- Độ phức tạp: Time O(n), Space O(n)
+- Ngày cần làm lại: 2026-06-30
