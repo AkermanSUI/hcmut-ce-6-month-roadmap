@@ -501,3 +501,34 @@
 - Pattern: Binary Search Insert Position
 - Độ phức tạp: Time O(log n), Space O(1)
 - Ngày cần làm lại: 2026-07-02
+
+
+## 2026-06-30
+
+### 32. Sqrt(x)
+
+* Link: https://leetcode.com/problems/sqrtx/
+* Topic: Binary Search, Math
+* Độ khó: Easy
+* Ngày làm: 2026-06-30
+* Trạng thái: Solved
+* Dịch đề: Cho số nguyên không âm `x`, trả về phần nguyên của căn bậc hai của `x`. Không được dùng hàm `sqrt`.
+* Ý tưởng: Dùng Binary Search để tìm số lớn nhất `mid` sao cho `mid * mid <= x`.
+* Lỗi sai / điểm cần nhớ: Khi tính `mid * mid`, nên dùng `long long` để tránh tràn số.
+* Pattern: Binary Search on Answer
+* Độ phức tạp: Time O(log x), Space O(1)
+* Ngày cần làm lại: 2026-07-03
+
+### 33. Valid Perfect Square
+
+* Link: https://leetcode.com/problems/valid-perfect-square/
+* Topic: Binary Search, Math
+* Độ khó: Easy
+* Ngày làm: 2026-06-30
+* Trạng thái: Solved
+* Dịch đề: Cho số nguyên dương `num`, kiểm tra xem `num` có phải số chính phương không. Số chính phương là số có dạng `k * k`.
+* Ý tưởng: Dùng Binary Search để tìm xem có số `mid` nào thỏa `mid * mid == num` hay không.
+* Lỗi sai / điểm cần nhớ: Khi bài yêu cầu kiểm tra bình phương hoặc căn bậc hai, nên nghĩ tới Binary Search on Answer. Dùng `long long` cho biến `square = mid * mid`.
+* Pattern: Binary Search on Answer
+* Độ phức tạp: Time O(log num), Space O(1)
+* Ngày cần làm lại: 2026-07-03
