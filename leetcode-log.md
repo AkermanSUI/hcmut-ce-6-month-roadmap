@@ -427,3 +427,17 @@
 - Pattern: Two Stacks
 - Độ phức tạp: Amortized O(1) cho mỗi thao tác; Space O(n)
 - Ngày cần làm lại: 2026-06-28
+
+### 27. Remove All Adjacent Duplicates In String
+
+- Link: https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/
+- Topic: Stack, String
+- Độ khó: Easy
+- Ngày làm: 2026-06-26
+- Trạng thái: Solved
+- Dịch đề: Cho một chuỗi, nếu có hai ký tự giống nhau đứng cạnh nhau thì xóa cả hai. Lặp lại cho đến khi không còn cặp trùng cạnh nhau.
+- Ý tưởng: Dùng `string res` như stack. Nếu ký tự hiện tại bằng ký tự cuối của `res` thì xóa ký tự cuối. Nếu không thì thêm ký tự hiện tại vào `res`.
+- Lỗi sai / điểm cần nhớ: Hàm cần trả về `string`, nên không thể `return stack`. Dùng `res.back()`, `res.push_back()`, `res.pop_back()` sẽ gọn hơn dùng `stack<char>`.
+- Pattern: Stack Cancellation
+- Độ phức tạp: Time O(n), Space O(n)
+- Ngày cần làm lại: 2026-06-29
