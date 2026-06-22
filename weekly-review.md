@@ -136,3 +136,94 @@
 - Bắt đầu Linked List cơ bản
 - Ôn lại Array/Hash Table
 - Duy trì ghi log sau mỗi bài
+
+## Week 2 Review - 2026-06-22 to 2026-06-28
+
+### Chủ đề đã học
+
+- Linked List
+- Stack
+- Queue
+- Stack Design
+- String as Stack
+
+### Bài LeetCode đã làm
+
+- Middle of the Linked List
+- Reverse Linked List
+- Linked List Cycle
+- Merge Two Sorted Lists
+- Valid Parentheses
+- Baseball Game
+- Number of Recent Calls
+- Implement Queue using Stacks
+- Backspace String Compare
+- Remove All Adjacent Duplicates In String
+- Min Stack
+- Make The String Great
+
+### Pattern đã học
+
+- Slow-Fast Pointers
+- Pointer Reversal
+- Floyd Cycle Detection
+- Dummy Node
+- Stack Matching
+- Stack Simulation
+- Queue FIFO
+- Two Stacks
+- String as Stack
+- Stack Cancellation
+- Auxiliary Stack
+
+### Kiến thức C++ đã học
+
+- ListNode*
+- nullptr
+- node->next
+- stack<int>
+- stack<char>
+- queue<int>
+- string as stack
+- push()
+- pop()
+- top()
+- front()
+- back()
+- empty()
+- size()
+- push_back()
+- pop_back()
+- stoi()
+- abs()
+
+### Lỗi sai đã gặp
+
+- Gọi fast->next khi fast có thể là nullptr
+- Quên lưu nextNode trước khi bẻ cur->next trong Reverse Linked List
+- Check nhầm s.empty() thay vì st.empty()
+- Dùng string nhưng gọi .top(), đúng phải là .back()
+- Return stack trong khi hàm yêu cầu return string
+- Viết sai ngoặc: abs(res.back() - c == 32) thay vì abs(res.back() - c) == 32
+
+### Bài yếu cần ôn thêm
+
+- Reverse Linked List
+- Merge Two Sorted Lists
+- Min Stack
+- Implement Queue using Stacks
+
+### Bài học quan trọng
+
+- Linked List là thao tác với mũi tên next.
+- Stack dùng khi cần xử lý phần tử gần nhất trước đó.
+- Queue dùng khi cần xử lý theo thứ tự vào trước ra trước.
+- string có thể dùng như stack khi xử lý chuỗi và cần trả về chuỗi.
+- Trước khi dùng top(), back(), front() phải đảm bảo container không rỗng.
+
+### Mục tiêu tuần 3
+
+- Bắt đầu Binary Search
+- Ôn lại Two Pointers
+- Làm quen Recursion cơ bản
+- Tiếp tục duy trì log sau mỗi bài
