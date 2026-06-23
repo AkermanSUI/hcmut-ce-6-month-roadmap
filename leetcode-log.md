@@ -532,3 +532,34 @@
 * Pattern: Binary Search on Answer
 * Độ phức tạp: Time O(log num), Space O(1)
 * Ngày cần làm lại: 2026-07-03
+
+
+## 2026-07-01
+
+### 34. Guess Number Higher or Lower
+
+- Link: https://leetcode.com/problems/guess-number-higher-or-lower/
+- Topic: Binary Search, Interactive
+- Độ khó: Easy
+- Ngày làm: 2026-07-01
+- Trạng thái: Solved
+- Dịch đề: Có một số bí mật nằm trong khoảng từ 1 đến n. Dùng hàm guess(num) để biết số mình đoán lớn hơn, nhỏ hơn hay bằng số bí mật. Trả về số bí mật đó.
+- Ý tưởng: Dùng Binary Search trên khoảng [1, n]. Nếu guess(mid) trả về 1 thì mid nhỏ quá, tìm bên phải. Nếu trả về -1 thì mid lớn quá, tìm bên trái. Nếu trả về 0 thì tìm đúng.
+- Lỗi sai / điểm cần nhớ: Phải hiểu đúng ý nghĩa của `guess(mid)`: `1` nghĩa là đoán nhỏ quá, `-1` nghĩa là đoán lớn quá.
+- Pattern: Binary Search with API
+- Độ phức tạp: Time O(log n), Space O(1)
+- Ngày cần làm lại: 2026-07-04
+
+### 35. Arranging Coins
+
+- Link: https://leetcode.com/problems/arranging-coins/
+- Topic: Binary Search, Math
+- Độ khó: Easy
+- Ngày làm: 2026-07-01
+- Trạng thái: Solved
+- Dịch đề: Có n đồng xu, xếp thành cầu thang. Hàng 1 cần 1 đồng, hàng 2 cần 2 đồng, hàng k cần k đồng. Trả về số hàng đầy đủ có thể xếp được.
+- Ý tưởng: Tìm số hàng lớn nhất k sao cho k * (k + 1) / 2 <= n. Dùng Binary Search on Answer để tìm k.
+- Lỗi sai / điểm cần nhớ: Công thức tổng 1 + 2 + ... + k là `k * (k + 1) / 2`. Nên dùng `long long` để tránh tràn số.
+- Pattern: Binary Search on Answer
+- Độ phức tạp: Time O(log n), Space O(1)
+- Ngày cần làm lại: 2026-07-04
