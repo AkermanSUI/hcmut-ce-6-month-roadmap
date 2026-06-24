@@ -593,3 +593,34 @@
 - Pattern: Reverse Each Segment
 - Độ phức tạp: Time O(n), Space O(1) nếu sửa trực tiếp trên string
 - Ngày cần làm lại: 2026-07-05
+
+
+## 2026-07-03
+
+### 38. Fibonacci Number
+
+- Link: https://leetcode.com/problems/fibonacci-number/
+- Topic: Recursion, Dynamic Programming, Math
+- Độ khó: Easy
+- Ngày làm: 2026-07-03
+- Trạng thái: Solved
+- Dịch đề: Cho số nguyên `n`, trả về số Fibonacci thứ `n`. Công thức là `F(0)=0`, `F(1)=1`, `F(n)=F(n-1)+F(n-2)`.
+- Ý tưởng: Dùng recursion. Nếu `n` là 0 hoặc 1 thì trả về luôn. Nếu không, trả về `fib(n - 1) + fib(n - 2)`.
+- Lỗi sai / điểm cần nhớ: Recursion cần base case để dừng. Bản recursion cơ bản dễ hiểu nhưng chưa tối ưu, sau này sẽ học DP để tối ưu.
+- Pattern: Basic Recursion
+- Độ phức tạp: Recursion cơ bản Time O(2^n), Space O(n). Bản iterative Time O(n), Space O(1).
+- Ngày cần làm lại: 2026-07-06
+
+### 39. Power of Two
+
+- Link: https://leetcode.com/problems/power-of-two/
+- Topic: Recursion, Math, Bit Manipulation
+- Độ khó: Easy
+- Ngày làm: 2026-07-03
+- Trạng thái: Solved
+- Dịch đề: Cho số nguyên `n`, kiểm tra xem `n` có phải là lũy thừa của 2 không.
+- Ý tưởng: Nếu `n == 1` thì đúng. Nếu `n <= 0` hoặc `n` là số lẻ khác 1 thì sai. Nếu không, tiếp tục kiểm tra `n / 2`.
+- Lỗi sai / điểm cần nhớ: Không được `return n / 2` trong hàm bool, vì số khác 0 sẽ bị hiểu là `true`. Phải gọi lại hàm: `return isPowerOfTwo(n / 2)`.
+- Pattern: Recursive Reduction
+- Độ phức tạp: Time O(log n), Space O(log n) nếu dùng recursion.
+- Ngày cần làm lại: 2026-07-06
