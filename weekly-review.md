@@ -227,3 +227,32 @@
 - Ôn lại Two Pointers
 - Làm quen Recursion cơ bản
 - Tiếp tục duy trì log sau mỗi bài
+
+
+## Week 3 Review - 2026-06-29 to 2026-07-05
+
+### Chủ đề đã học
+- Binary Search
+- Binary Search on Answer
+- Two Pointers
+- Recursion
+
+### Bài quan trọng
+- Binary Search
+- Sqrt(x)
+- Arranging Coins
+- Reverse Words in a String III
+- Power of Two
+- Add Digits
+
+### Lỗi cần nhớ
+- `left = mid++` gây TLE
+- `right = right - 1` chưa chuẩn, nên dùng `right = mid - 1`
+- `mid * mid` nên dùng `long long`
+- Gặp dấu cách ở `i` thì đảo từ `left` đến `i - 1`
+- `return n / 2` sai trong hàm bool
+- Recursion phải có base case
+
+### Mục tiêu tuần sau
+- Học Binary Tree cơ bản
+- Ôn recursion qua cây
