@@ -624,3 +624,34 @@
 - Pattern: Recursive Reduction
 - Độ phức tạp: Time O(log n), Space O(log n) nếu dùng recursion.
 - Ngày cần làm lại: 2026-07-06
+
+
+## 2026-07-04
+
+### 40. Reverse String
+
+- Link: https://leetcode.com/problems/reverse-string/
+- Topic: Two Pointers, String, Recursion
+- Độ khó: Easy
+- Ngày làm: 2026-07-04
+- Trạng thái: Solved
+- Dịch đề: Cho một mảng ký tự, đảo ngược mảng đó ngay trong mảng ban đầu, không tạo mảng mới.
+- Ý tưởng: Dùng recursion với hai con trỏ `left` và `right`. Nếu `left >= right` thì dừng. Ngược lại, swap hai ký tự ở hai đầu rồi gọi tiếp với `left + 1` và `right - 1`.
+- Lỗi sai / điểm cần nhớ: Cần viết hàm phụ `helper` để truyền thêm `left` và `right`, vì hàm chính của LeetCode chỉ nhận `vector<char>& s`.
+- Pattern: Recursive Two Pointers
+- Độ phức tạp: Time O(n), Space O(n) do recursion call stack
+- Ngày cần làm lại: 2026-07-07
+
+### 41. Add Digits
+
+- Link: https://leetcode.com/problems/add-digits/
+- Topic: Math, Recursion
+- Độ khó: Easy
+- Ngày làm: 2026-07-04
+- Trạng thái: Solved
+- Dịch đề: Cho một số nguyên `num`, lặp lại việc cộng các chữ số của nó cho đến khi kết quả chỉ còn một chữ số.
+- Ý tưởng: Nếu `num < 10` thì trả về luôn. Nếu không, tính tổng các chữ số của `num`, rồi gọi lại `addDigits(sumDigits)`.
+- Lỗi sai / điểm cần nhớ: Không nên để `sumDigits` bên ngoài hàm vì sẽ bị cộng dồn qua các lần gọi đệ quy. Base case phải check `num < 10`, không phải check `sumDigits`.
+- Pattern: Recursive Reduction
+- Độ phức tạp: Time O(log n) cho mỗi lần tính tổng chữ số, Space O(log n) nếu dùng recursion
+- Ngày cần làm lại: 2026-07-07
