@@ -563,3 +563,33 @@
 - Pattern: Binary Search on Answer
 - Độ phức tạp: Time O(log n), Space O(1)
 - Ngày cần làm lại: 2026-07-04
+
+## 2026-07-02
+
+### 36. Squares of a Sorted Array
+
+- Link: https://leetcode.com/problems/squares-of-a-sorted-array/
+- Topic: Array, Two Pointers, Sorting
+- Độ khó: Easy
+- Ngày làm: 2026-07-02
+- Trạng thái: Solved
+- Dịch đề: Cho mảng `nums` đã sắp xếp tăng dần. Bình phương từng phần tử rồi trả về mảng mới cũng được sắp xếp tăng dần.
+- Ý tưởng: Vì số âm lớn khi bình phương có thể thành số rất lớn, nên dùng hai con trỏ ở hai đầu mảng. So sánh bình phương của hai đầu, số lớn hơn đặt vào cuối mảng kết quả.
+- Lỗi sai / điểm cần nhớ: Điền kết quả từ cuối về đầu vì mỗi lần chọn ra bình phương lớn nhất còn lại.
+- Pattern: Two Pointers from Both Ends
+- Độ phức tạp: Time O(n), Space O(n)
+- Ngày cần làm lại: 2026-07-05
+
+### 37. Reverse Words in a String III
+
+- Link: https://leetcode.com/problems/reverse-words-in-a-string-iii/
+- Topic: String, Two Pointers
+- Độ khó: Easy
+- Ngày làm: 2026-07-02
+- Trạng thái: Solved
+- Dịch đề: Cho một chuỗi gồm nhiều từ. Đảo ngược từng từ riêng lẻ nhưng giữ nguyên thứ tự các từ.
+- Ý tưởng: Duyệt chuỗi để tìm từng từ. Khi gặp dấu cách hoặc hết chuỗi, đảo đoạn từ vừa tìm được.
+- Lỗi sai / điểm cần nhớ: Khi gặp dấu cách ở index `i`, từ cần đảo là từ `left` đến `i - 1`, không được đảo cả dấu cách. Cần xử lý thêm từ cuối cùng bằng điều kiện `i == s.size()`.
+- Pattern: Reverse Each Segment
+- Độ phức tạp: Time O(n), Space O(1) nếu sửa trực tiếp trên string
+- Ngày cần làm lại: 2026-07-05
