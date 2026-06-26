@@ -686,3 +686,33 @@
 - Pattern: Compare Two Trees
 - Độ phức tạp: Time O(n), Space O(h)
 - Ngày cần làm lại: 2026-07-09
+
+## 2026-07-07
+
+### 44. Invert Binary Tree
+
+- Link: https://leetcode.com/problems/invert-binary-tree/
+- Topic: Tree, DFS, Recursion, Binary Tree
+- Độ khó: Easy
+- Ngày làm: 2026-07-07
+- Trạng thái: Solved
+- Dịch đề: Cho một cây nhị phân, đảo ngược cây như soi gương bằng cách đổi chỗ cây con trái và cây con phải ở mỗi node.
+- Ý tưởng: Dùng recursion. Nếu root là nullptr thì trả về nullptr. Nếu không, swap root->left và root->right, rồi tiếp tục invert hai cây con.
+- Lỗi sai / điểm cần nhớ: Invert Tree không cần tạo node mới. Chỉ cần đổi mũi tên left/right. Nếu dùng cách lưu `leftInverted` và `rightInverted`, đó chỉ là lưu địa chỉ cây con sau khi recursion xử lý xong, không phải tạo node mới.
+- Pattern: Tree Transformation
+- Độ phức tạp: Time O(n), Space O(h)
+- Ngày cần làm lại: 2026-07-10
+
+### 45. Symmetric Tree
+
+- Link: https://leetcode.com/problems/symmetric-tree/
+- Topic: Tree, DFS, BFS, Recursion, Binary Tree
+- Độ khó: Easy
+- Ngày làm: 2026-07-07
+- Trạng thái: Solved
+- Dịch đề: Cho một cây nhị phân, kiểm tra xem cây có đối xứng qua trục giữa hay không.
+- Ý tưởng: Kiểm tra cây trái và cây phải có phải ảnh gương của nhau không. Hai node mirror phải có giá trị bằng nhau, và left->left phải mirror với right->right, left->right phải mirror với right->left.
+- Lỗi sai / điểm cần nhớ: So sánh đối xứng không phải left với left, right với right. Phải so sánh ngoài với ngoài và trong với trong: `left->left` với `right->right`, `left->right` với `right->left`.
+- Pattern: Mirror Recursion
+- Độ phức tạp: Time O(n), Space O(h)
+- Ngày cần làm lại: 2026-07-10
