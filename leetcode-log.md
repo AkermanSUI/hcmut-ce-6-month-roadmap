@@ -655,3 +655,34 @@
 - Pattern: Recursive Reduction
 - Độ phức tạp: Time O(log n) cho mỗi lần tính tổng chữ số, Space O(log n) nếu dùng recursion
 - Ngày cần làm lại: 2026-07-07
+
+
+## 2026-07-06
+
+### 42. Maximum Depth of Binary Tree
+
+- Link: https://leetcode.com/problems/maximum-depth-of-binary-tree/
+- Topic: Tree, DFS, Recursion, Binary Tree
+- Độ khó: Easy
+- Ngày làm: 2026-07-06
+- Trạng thái: Solved
+- Dịch đề: Cho một cây nhị phân, trả về độ sâu lớn nhất của cây. Độ sâu lớn nhất là số node trên đường đi dài nhất từ root xuống node lá.
+- Ý tưởng: Dùng recursion. Nếu root là nullptr thì trả về 0. Nếu không, tính độ sâu cây trái và cây phải, rồi trả về 1 + max(leftDepth, rightDepth).
+- Lỗi sai:
+- Pattern: Tree DFS Recursion
+- Độ phức tạp: Time O(n), Space O(h), với h là chiều cao cây
+- Ngày cần làm lại: 2026-07-09
+
+### 43. Same Tree
+
+- Link: https://leetcode.com/problems/same-tree/
+- Topic: Tree, DFS, Recursion, Binary Tree
+- Độ khó: Easy
+- Ngày làm: 2026-07-06
+- Trạng thái: Solved
+- Dịch đề: Cho hai cây nhị phân p và q, kiểm tra xem chúng có giống hệt nhau về cấu trúc và giá trị hay không.
+- Ý tưởng: Dùng recursion để so sánh từng cặp node. Nếu cả hai đều nullptr thì giống. Nếu chỉ một bên nullptr thì khác. Nếu cả hai tồn tại thì so sánh giá trị, rồi tiếp tục so sánh cây trái và cây phải.
+- Lỗi sai:
+- Pattern: Compare Two Trees
+- Độ phức tạp: Time O(n), Space O(h)
+- Ngày cần làm lại: 2026-07-09
