@@ -746,4 +746,34 @@
 - Pattern: Preorder Traversal
 - Độ phức tạp: Time O(n), Space O(h) nếu không tính vector kết quả
 - Ngày cần làm lại: 2026-07-11
+
+## 2026-07-09
+
+### 48. Binary Tree Postorder Traversal
+
+- Link: https://leetcode.com/problems/binary-tree-postorder-traversal/
+- Topic: Stack, Tree, DFS, Binary Tree
+- Độ khó: Easy
+- Ngày làm: 2026-07-09
+- Trạng thái: Solved
+- Dịch đề: Cho một cây nhị phân, trả về danh sách giá trị các node theo thứ tự postorder.
+- Ý tưởng: Postorder nghĩa là duyệt cây trái, duyệt cây phải, rồi mới lấy giá trị node hiện tại. Dùng recursion và vector `res` để lưu kết quả.
+- Lỗi sai:
+- Pattern: Postorder Traversal
+- Độ phức tạp: Time O(n), Space O(h) nếu không tính vector kết quả
+- Ngày cần làm lại: 2026-07-12
+
+### 49. Path Sum
+
+- Link: https://leetcode.com/problems/path-sum/
+- Topic: Tree, DFS, Recursion, Binary Tree
+- Độ khó: Easy
+- Ngày làm: 2026-07-09
+- Trạng thái: Solved
+- Dịch đề: Cho cây nhị phân và số `targetSum`, kiểm tra xem có đường đi từ root đến leaf sao cho tổng giá trị các node bằng `targetSum` không.
+- Ý tưởng: Dùng recursion. Mỗi lần đi xuống một node thì trừ `root->val` khỏi targetSum. Khi gặp node lá, kiểm tra targetSum có bằng giá trị node lá không.
+- Lỗi sai:
+- Pattern: Root-to-Leaf DFS
+- Độ phức tạp: Time O(n), Space O(h)
+- Ngày cần làm lại: 2026-07-12
   
