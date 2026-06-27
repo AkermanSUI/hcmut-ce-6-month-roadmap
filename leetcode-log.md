@@ -716,3 +716,34 @@
 - Pattern: Mirror Recursion
 - Độ phức tạp: Time O(n), Space O(h)
 - Ngày cần làm lại: 2026-07-10
+
+## 2026-07-08
+
+### 46. Binary Tree Inorder Traversal
+
+- Link: https://leetcode.com/problems/binary-tree-inorder-traversal/
+- Topic: Stack, Tree, DFS, Binary Tree
+- Độ khó: Easy
+- Ngày làm: 2026-07-08
+- Trạng thái: Solved
+- Dịch đề: Cho một cây nhị phân, trả về danh sách giá trị các node theo thứ tự inorder.
+- Ý tưởng: Inorder nghĩa là duyệt cây trái, lấy giá trị node hiện tại, rồi duyệt cây phải. Dùng recursion và vector `res` để lưu kết quả.
+- Lỗi sai / điểm cần nhớ: Inorder là `Left -> Root -> Right`, nên `res.push_back(root->val)` nằm giữa hai lần gọi dfs.
+- Pattern: Inorder Traversal
+- Độ phức tạp: Time O(n), Space O(h) nếu không tính vector kết quả
+- Ngày cần làm lại: 2026-07-11
+
+### 47. Binary Tree Preorder Traversal
+
+- Link: https://leetcode.com/problems/binary-tree-preorder-traversal/
+- Topic: Stack, Tree, DFS, Binary Tree
+- Độ khó: Easy
+- Ngày làm: 2026-07-08
+- Trạng thái: Solved
+- Dịch đề: Cho một cây nhị phân, trả về danh sách giá trị các node theo thứ tự preorder.
+- Ý tưởng: Preorder nghĩa là lấy giá trị node hiện tại trước, rồi duyệt cây trái, sau đó duyệt cây phải. Dùng recursion và vector `res` để lưu kết quả.
+- Lỗi sai / điểm cần nhớ: Preorder là `Root -> Left -> Right`, nên `res.push_back(root->val)` nằm đầu hàm dfs, sau base case.
+- Pattern: Preorder Traversal
+- Độ phức tạp: Time O(n), Space O(h) nếu không tính vector kết quả
+- Ngày cần làm lại: 2026-07-11
+  
