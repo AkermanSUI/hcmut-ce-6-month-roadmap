@@ -777,3 +777,32 @@
 - Độ phức tạp: Time O(n), Space O(h)
 - Ngày cần làm lại: 2026-07-12
   
+## 2026-07-10
+
+### 50. Minimum Depth of Binary Tree
+
+- Link: https://leetcode.com/problems/minimum-depth-of-binary-tree/
+- Topic: Tree, DFS, BFS, Binary Tree
+- Độ khó: Easy
+- Ngày làm: 2026-07-10
+- Trạng thái: Solved
+- Dịch đề: Cho một cây nhị phân, trả về độ sâu nhỏ nhất từ root đến một node lá.
+- Ý tưởng: Dùng recursion. Nếu root rỗng thì trả về 0. Nếu là node lá thì trả về 1. Nếu chỉ có một bên con thì phải đi theo bên có con, không được lấy min với 0.
+- Lỗi sai / điểm cần nhớ: Minimum Depth là đường ngắn nhất từ root đến node lá, không phải đến nullptr gần nhất.
+- Pattern: Tree Depth DFS
+- Độ phức tạp: Time O(n), Space O(h)
+- Ngày cần làm lại: 2026-07-13
+
+### 51. Balanced Binary Tree
+
+- Link: https://leetcode.com/problems/balanced-binary-tree/
+- Topic: Tree, DFS, Recursion, Binary Tree
+- Độ khó: Easy
+- Ngày làm: 2026-07-10
+- Trạng thái: Solved
+- Dịch đề: Cho một cây nhị phân, kiểm tra cây có balanced hay không. Balanced nghĩa là tại mọi node, chiều cao cây trái và cây phải lệch nhau không quá 1.
+- Ý tưởng: Tính chiều cao cây trái và cây phải tại mỗi node. Nếu lệch quá 1 thì false. Sau đó kiểm tra tiếp cả cây trái và cây phải.
+- Lỗi sai / điểm cần nhớ: Không chỉ kiểm tra root. Cần kiểm tra mọi node, nên phải return `isBalanced(root->left) && isBalanced(root->right)`.
+- Pattern: Height Check
+- Độ phức tạp: Bản dễ hiểu Time O(n^2) trong trường hợp xấu, Space O(h)
+- Ngày cần làm lại: 2026-07-13
