@@ -806,3 +806,34 @@
 - Pattern: Height Check
 - Độ phức tạp: Bản dễ hiểu Time O(n^2) trong trường hợp xấu, Space O(h)
 - Ngày cần làm lại: 2026-07-13
+
+
+## 2026-07-11
+
+### 52. Sum of Left Leaves
+
+- Link: https://leetcode.com/problems/sum-of-left-leaves/
+- Topic: Tree, DFS, BFS, Binary Tree
+- Độ khó: Easy
+- Ngày làm: 2026-07-11
+- Trạng thái: Solved
+- Dịch đề: Cho một cây nhị phân, tính tổng giá trị của tất cả node lá nằm bên trái cha của nó.
+- Ý tưởng: Duyệt cây bằng recursion. Ở mỗi node, kiểm tra xem `root->left` có tồn tại và có phải node lá không. Nếu đúng thì cộng `root->left->val` vào kết quả.
+- Lỗi sai / điểm cần nhớ: Không cộng mọi node. Chỉ cộng node thỏa hai điều kiện: là node lá và là con trái của cha nó.
+- Pattern: Tree DFS with Condition
+- Độ phức tạp: Time O(n), Space O(h)
+- Ngày cần làm lại: 2026-07-14
+
+### 53. Diameter of Binary Tree
+
+- Link: https://leetcode.com/problems/diameter-of-binary-tree/
+- Topic: Tree, DFS, Binary Tree
+- Độ khó: Easy
+- Ngày làm: 2026-07-11
+- Trạng thái: Solved
+- Dịch đề: Cho một cây nhị phân, trả về đường kính của cây. Đường kính là số cạnh trên đường đi dài nhất giữa hai node bất kỳ.
+- Ý tưởng: Tại mỗi node, đường đi dài nhất đi qua node đó bằng `height(left) + height(right)`. Dùng biến `ans` để lưu giá trị lớn nhất trong quá trình tính height.
+- Lỗi sai / điểm cần nhớ: `ans = max(ans, leftHeight + rightHeight)` dùng để cập nhật đường kính. `return 1 + max(leftHeight, rightHeight)` dùng để trả chiều cao cho node cha. Diameter lấy cả hai bên, height chỉ chọn một bên dài nhất.
+- Pattern: Tree Height + Global Answer
+- Độ phức tạp: Time O(n), Space O(h)
+- Ngày cần làm lại: 2026-07-14
