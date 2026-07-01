@@ -256,3 +256,93 @@
 ### Mục tiêu tuần sau
 - Học Binary Tree cơ bản
 - Ôn recursion qua cây
+
+
+## Week 4 Review - 2026-07-06 to 2026-07-12
+
+### Chủ đề đã học
+
+- Binary Tree
+- Tree DFS
+- Tree Recursion
+- Tree Traversal
+- Tree Depth / Height
+- Root-to-Leaf Path
+- Mirror Recursion
+- Global Answer in Tree
+
+### Bài LeetCode đã làm
+
+- Maximum Depth of Binary Tree
+- Same Tree
+- Invert Binary Tree
+- Symmetric Tree
+- Binary Tree Inorder Traversal
+- Binary Tree Preorder Traversal
+- Binary Tree Postorder Traversal
+- Path Sum
+- Minimum Depth of Binary Tree
+- Balanced Binary Tree
+- Sum of Left Leaves
+- Diameter of Binary Tree
+
+### Pattern đã học
+
+- Tree DFS Recursion
+- Compare Two Trees
+- Tree Transformation
+- Mirror Recursion
+- Inorder Traversal
+- Preorder Traversal
+- Postorder Traversal
+- Root-to-Leaf DFS
+- Tree Depth DFS
+- Height Check
+- Tree DFS with Condition
+- Tree Height + Global Answer
+
+### Kiến thức C++ đã học
+
+- TreeNode*
+- root->val
+- root->left
+- root->right
+- nullptr
+- helper function
+- vector<int>& res
+- recursion return int
+- recursion return bool
+- global variable ans
+
+### Lỗi sai đã gặp
+
+- Chưa quen tư duy TreeNode* và con trỏ
+- Nhầm node lá với nullptr
+- Minimum Depth không được lấy min với nhánh nullptr
+- Sum of Left Leaves không phải cộng mọi node, chỉ cộng left leaf
+- Balanced Tree phải kiểm tra mọi node, không chỉ root
+- Diameter dùng ans để lưu đường kính, còn hàm height vẫn return chiều cao
+- Traversal chỉ khác vị trí push_back(root->val)
+
+### Bài yếu cần ôn thêm
+
+- Minimum Depth of Binary Tree
+- Balanced Binary Tree
+- Sum of Left Leaves
+- Diameter of Binary Tree
+- Symmetric Tree
+
+### Bài học quan trọng
+
+- Tree recursion thường bắt đầu bằng `if (root == nullptr)`.
+- Với tree, mỗi node thường hỏi cùng một câu hỏi cho left và right.
+- Traversal khác nhau ở vị trí xử lý root.
+- Height trả về cho node cha sử dụng.
+- Diameter cần biến ans vì đáp án có thể nằm ở bất kỳ node nào.
+- Node lá là node không có cả left và right.
+
+### Mục tiêu tuần sau
+
+- Ôn lại Binary Tree nếu còn yếu
+- Bắt đầu Binary Search Tree hoặc Recursion nâng nhẹ
+- Làm thêm bài tổng hợp DSA Easy/Medium nhẹ
