@@ -837,3 +837,33 @@
 - Pattern: Tree Height + Global Answer
 - Độ phức tạp: Time O(n), Space O(h)
 - Ngày cần làm lại: 2026-07-14
+
+## 2026-07-13
+
+### 54. Search in a Binary Search Tree
+
+- Link: https://leetcode.com/problems/search-in-a-binary-search-tree/
+- Topic: Tree, Binary Search Tree, DFS, Binary Tree
+- Độ khó: Easy
+- Ngày làm: 2026-07-13
+- Trạng thái: Solved
+- Dịch đề: Cho root của một Binary Search Tree và một giá trị `val`, tìm node có giá trị bằng `val`. Nếu tìm thấy thì trả về node đó, nếu không thì trả về nullptr.
+- Ý tưởng: Dựa vào tính chất BST. Nếu `val` nhỏ hơn `root->val` thì tìm bên trái. Nếu lớn hơn thì tìm bên phải. Nếu bằng thì trả về root.
+- Lỗi sai / điểm cần nhớ: Không được `return root->left` hoặc `root->right` ngay, vì node cần tìm có thể nằm sâu hơn. Phải gọi tiếp `searchBST(root->left/right, val)`.
+- Pattern: BST Search
+- Độ phức tạp: Time O(h), Space O(h) nếu dùng recursion
+- Ngày cần làm lại: 2026-07-16
+
+### 55. Range Sum of BST
+
+- Link: https://leetcode.com/problems/range-sum-of-bst/
+- Topic: Tree, Binary Search Tree, DFS, Binary Tree
+- Độ khó: Easy
+- Ngày làm: 2026-07-13
+- Trạng thái: Solved
+- Dịch đề: Cho một BST và hai số `low`, `high`, tính tổng tất cả node có giá trị nằm trong đoạn `[low, high]`.
+- Ý tưởng: Dựa vào tính chất BST để bỏ nhánh không cần xét. Nếu node hiện tại nhỏ hơn `low` thì chỉ đi phải. Nếu lớn hơn `high` thì chỉ đi trái. Nếu nằm trong đoạn thì cộng node hiện tại và xét cả hai bên.
+- Lỗi sai / điểm cần nhớ: Khi node nằm trong range, phải cộng node hiện tại và tiếp tục xét cả cây trái lẫn cây phải, không được return sum ngay.
+- Pattern: BST Pruning
+- Độ phức tạp: Time O(n) trường hợp xấu, Space O(h)
+- Ngày cần làm lại: 2026-07-16
