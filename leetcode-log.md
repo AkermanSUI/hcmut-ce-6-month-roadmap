@@ -867,3 +867,34 @@
 - Pattern: BST Pruning
 - Độ phức tạp: Time O(n) trường hợp xấu, Space O(h)
 - Ngày cần làm lại: 2026-07-16
+
+
+## 2026-07-14
+
+### 56. Minimum Absolute Difference in BST
+
+- Link: https://leetcode.com/problems/minimum-absolute-difference-in-bst/
+- Topic: Tree, DFS, Binary Search Tree, Binary Tree
+- Độ khó: Easy
+- Ngày làm: 2026-07-14
+- Trạng thái: Solved
+- Dịch đề: Cho một BST, tìm hiệu tuyệt đối nhỏ nhất giữa giá trị của hai node bất kỳ.
+- Ý tưởng: Duyệt inorder để lấy giá trị theo thứ tự tăng dần. Vì mảng đã tăng dần nên hiệu nhỏ nhất chỉ cần xét giữa hai phần tử kề nhau.
+- Lỗi sai / điểm cần nhớ: BST duyệt inorder sẽ ra dãy tăng dần.
+- Pattern: BST Inorder Sorted
+- Độ phức tạp: Time O(n), Space O(n)
+- Ngày cần làm lại: 2026-07-17
+
+### 57. Increasing Order Search Tree
+
+- Link: https://leetcode.com/problems/increasing-order-search-tree/
+- Topic: Tree, DFS, Binary Search Tree, Binary Tree
+- Độ khó: Easy
+- Ngày làm: 2026-07-14
+- Trạng thái: Solved
+- Dịch đề: Cho một BST, sắp xếp lại cây thành dạng tăng dần sao cho node nhỏ nhất đứng đầu, mỗi node chỉ có con phải và không có con trái.
+- Ý tưởng: Duyệt inorder để lấy các node theo thứ tự tăng dần, sau đó nối các node lại bằng con trỏ right và đặt left của mỗi node thành nullptr.
+- Lỗi sai / điểm cần nhớ: Nếu dùng `vector<TreeNode*>` thì phải `push_back(root)`, không phải `push_back(root->val)`, vì cần lưu node thật để nối lại cây.
+- Pattern: BST Inorder Rebuild
+- Độ phức tạp: Time O(n), Space O(n)
+- Ngày cần làm lại: 2026-07-17
