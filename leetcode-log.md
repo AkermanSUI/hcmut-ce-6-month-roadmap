@@ -898,3 +898,33 @@
 - Pattern: BST Inorder Rebuild
 - Độ phức tạp: Time O(n), Space O(n)
 - Ngày cần làm lại: 2026-07-17
+
+## 2026-07-15
+
+### 58. Validate Binary Search Tree
+
+- Link: https://leetcode.com/problems/validate-binary-search-tree/
+- Topic: Tree, DFS, Binary Search Tree, Binary Tree
+- Độ khó: Medium
+- Ngày làm: 2026-07-15
+- Trạng thái: Solved
+- Dịch đề: Cho một cây nhị phân, kiểm tra xem cây đó có phải là Binary Search Tree hợp lệ không.
+- Ý tưởng: Duyệt inorder để lấy giá trị node theo thứ tự. Với BST hợp lệ, kết quả inorder phải là dãy tăng nghiêm ngặt.
+- Lỗi sai / điểm cần nhớ: Khi kiểm tra vector inorder, phải tránh truy cập vượt mảng. Nên duyệt từ `i = 1` và so sánh `res[i] <= res[i - 1]`.
+- Pattern: BST Validation by Inorder
+- Độ phức tạp: Time O(n), Space O(n)
+- Ngày cần làm lại: 2026-07-18
+
+### 59. Two Sum IV - Input is a BST
+
+- Link: https://leetcode.com/problems/two-sum-iv-input-is-a-bst/
+- Topic: Tree, DFS, BFS, Binary Search Tree, Two Pointers
+- Độ khó: Easy
+- Ngày làm: 2026-07-15
+- Trạng thái: Solved
+- Dịch đề: Cho một BST và số `k`, kiểm tra xem có hai node khác nhau trong cây có tổng bằng `k` không.
+- Ý tưởng: Duyệt inorder để lấy mảng tăng dần, sau đó dùng two pointers để tìm hai số có tổng bằng `k`.
+- Lỗi sai / điểm cần nhớ: Vì cần hai node khác nhau nên dùng điều kiện `left < right`, không dùng `left <= right`.
+- Pattern: BST Inorder + Two Pointers
+- Độ phức tạp: Time O(n), Space O(n)
+- Ngày cần làm lại: 2026-07-18
