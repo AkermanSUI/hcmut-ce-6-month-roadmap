@@ -928,3 +928,34 @@
 - Pattern: BST Inorder + Two Pointers
 - Độ phức tạp: Time O(n), Space O(n)
 - Ngày cần làm lại: 2026-07-18
+
+
+## 2026-07-16
+
+### 60. Lowest Common Ancestor of a Binary Search Tree
+
+- Link: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
+- Topic: Tree, Binary Search Tree, DFS, Binary Tree
+- Độ khó: Medium
+- Ngày làm: 2026-07-16
+- Trạng thái: Solved
+- Dịch đề: Cho một BST và hai node p, q, tìm tổ tiên chung thấp nhất của hai node đó.
+- Ý tưởng: Dựa vào tính chất BST. Nếu cả p và q nhỏ hơn root thì đi trái. Nếu cả hai lớn hơn root thì đi phải. Nếu chúng nằm khác phía hoặc một node bằng root thì root là đáp án.
+- Lỗi sai / điểm cần nhớ: Node có thể là tổ tiên của chính nó. Có thể thêm `if (root == nullptr) return nullptr;` để code an toàn hơn.
+- Pattern: BST Navigation
+- Độ phức tạp: Time O(h), Space O(h) nếu dùng recursion
+- Ngày cần làm lại: 2026-07-19
+
+### 61. Convert Sorted Array to Binary Search Tree
+
+- Link: https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/
+- Topic: Array, Divide and Conquer, Tree, Binary Search Tree
+- Độ khó: Easy
+- Ngày làm: 2026-07-16
+- Trạng thái: Solved
+- Dịch đề: Cho một mảng đã sắp xếp tăng dần, chuyển nó thành một cây BST cân bằng chiều cao.
+- Ý tưởng: Chọn phần tử giữa làm root. Nửa trái của mảng tạo cây con trái, nửa phải tạo cây con phải. Dùng recursion để xây cây.
+- Lỗi sai / điểm cần nhớ: Bài này input là mảng, chưa có node sẵn, nên cần `new TreeNode(nums[mid])` để tạo node mới.
+- Pattern: Divide and Conquer Build Tree
+- Độ phức tạp: Time O(n), Space O(log n) nếu cây cân bằng, chưa tính cây kết quả
+- Ngày cần làm lại: 2026-07-19
