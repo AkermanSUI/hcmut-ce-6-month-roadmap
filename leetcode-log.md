@@ -959,3 +959,33 @@
 - Pattern: Divide and Conquer Build Tree
 - Độ phức tạp: Time O(n), Space O(log n) nếu cây cân bằng, chưa tính cây kết quả
 - Ngày cần làm lại: 2026-07-19
+
+## 2026-07-18
+
+### 64. Trim a Binary Search Tree
+
+- Link: https://leetcode.com/problems/trim-a-binary-search-tree/
+- Topic: Tree, Binary Search Tree, DFS, Binary Tree
+- Độ khó: Medium
+- Ngày làm: 2026-07-18
+- Trạng thái: Solved
+- Dịch đề: Cho một BST và hai số `low`, `high`, cắt cây sao cho chỉ còn các node có giá trị nằm trong đoạn `[low, high]`.
+- Ý tưởng: Dựa vào tính chất BST. Nếu node hiện tại nhỏ hơn `low` thì bỏ node đó và cây trái, chỉ xét cây phải. Nếu node hiện tại lớn hơn `high` thì bỏ node đó và cây phải, chỉ xét cây trái. Nếu node nằm trong range thì giữ lại và trim tiếp hai cây con.
+- Lỗi sai / điểm cần nhớ: Khi node nằm trong range thì không chỉ return root ngay, mà phải gắn lại `root->left = trimBST(...)` và `root->right = trimBST(...)`.
+- Pattern: BST Pruning
+- Độ phức tạp: Time O(n), Space O(h)
+- Ngày cần làm lại: 2026-07-21
+
+### 65. Delete Node in a BST
+
+- Link: https://leetcode.com/problems/delete-node-in-a-bst/
+- Topic: Tree, Binary Search Tree, Binary Tree
+- Độ khó: Medium
+- Ngày làm: 2026-07-18
+- Trạng thái: Solved
+- Dịch đề: Cho một BST và giá trị `key`, xóa node có giá trị bằng `key` sao cho cây sau khi xóa vẫn là BST.
+- Ý tưởng: Tìm node cần xóa bằng tính chất BST. Nếu node không có con trái thì trả về cây phải. Nếu không có con phải thì trả về cây trái. Nếu có cả hai con thì lấy node nhỏ nhất bên cây phải để thay thế.
+- Lỗi sai / điểm cần nhớ: Khi đi tìm key ở cây trái/phải, phải gắn lại `root->left = deleteNode(...)` hoặc `root->right = deleteNode(...)`, không được return cây con trực tiếp làm mất root. Với node có hai con, copy successor lên rồi xóa successor cũ ở cây phải.
+- Pattern: BST Delete
+- Độ phức tạp: Time O(h), Space O(h) nếu dùng recursion
+- Ngày cần làm lại: 2026-07-21
