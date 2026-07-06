@@ -989,3 +989,20 @@
 - Pattern: BST Delete
 - Độ phức tạp: Time O(h), Space O(h) nếu dùng recursion
 - Ngày cần làm lại: 2026-07-21
+
+
+## 2026-07-19
+
+### Review - Insert into a Binary Search Tree
+
+- Link: https://leetcode.com/problems/insert-into-a-binary-search-tree/
+- Topic: Tree, Binary Search Tree, Recursion
+- Trạng thái: Reviewed
+- Ý tưởng: Nếu gặp `nullptr` thì tạo node mới bằng `new TreeNode(val)`. Nếu `val` nhỏ hơn root thì chèn vào trái, nếu lớn hơn thì chèn vào phải.
+- Lỗi sai / điểm cần nhớ: Vì bài này làm thay đổi cây, phải gắn kết quả đệ quy lại: `root->left = insertIntoBST(...)` hoặc `root->right = insertIntoBST(...)`, rồi `return root`.
+
+### Review - BST Return Pattern
+
+- Ghi nhớ:
+  - Tìm / tính / kiểm tra -> return kết quả trực tiếp.
+  - Sửa / chèn / xóa / cắt / dựng cây -> gắn lại con trỏ rồi return root.
