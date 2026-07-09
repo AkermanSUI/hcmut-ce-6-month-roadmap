@@ -1006,3 +1006,33 @@
 - Ghi nhớ:
   - Tìm / tính / kiểm tra -> return kết quả trực tiếp.
   - Sửa / chèn / xóa / cắt / dựng cây -> gắn lại con trỏ rồi return root.
+ 
+## 2026-07-20
+
+### 66. Last Stone Weight
+
+- Link: https://leetcode.com/problems/last-stone-weight/
+- Topic: Heap, Priority Queue
+- Độ khó: Easy
+- Ngày làm: 2026-07-20
+- Trạng thái: Solved
+- Dịch đề: Cho một mảng trọng lượng các viên đá. Mỗi lượt lấy hai viên nặng nhất ra đập nhau. Nếu bằng nhau thì cả hai biến mất, nếu khác nhau thì viên còn lại có trọng lượng bằng hiệu của hai viên. Trả về trọng lượng viên cuối cùng hoặc 0 nếu không còn viên nào.
+- Ý tưởng: Dùng `priority_queue<int>` để luôn lấy được viên đá nặng nhất. Mỗi vòng pop hai viên lớn nhất, nếu khác nhau thì push lại hiệu.
+- Lỗi sai / điểm cần nhớ: `pq.pop()` không trả về giá trị. Muốn lấy giá trị phải dùng `pq.top()` trước rồi mới `pq.pop()`.
+- Pattern: Max Heap Simulation
+- Độ phức tạp: Time O(n log n), Space O(n)
+- Ngày cần làm lại: 2026-07-23
+
+### 67. Kth Largest Element in an Array
+
+- Link: https://leetcode.com/problems/kth-largest-element-in-an-array/
+- Topic: Heap, Priority Queue, Sorting
+- Độ khó: Medium
+- Ngày làm: 2026-07-20
+- Trạng thái: Solved
+- Dịch đề: Cho mảng `nums` và số `k`, trả về phần tử lớn thứ k trong mảng.
+- Ý tưởng: Có thể dùng max heap bằng cách push toàn bộ phần tử vào `priority_queue`, pop `k - 1` lần rồi return `pq.top()`. Cách tối ưu hơn là dùng min heap size k để chỉ giữ lại k phần tử lớn nhất.
+- Lỗi sai / điểm cần nhớ: `priority_queue<int>` mặc định là max heap. Nếu muốn min heap thì dùng `priority_queue<int, vector<int>, greater<int>>`.
+- Pattern: Kth Element with Heap
+- Độ phức tạp: Max heap toàn bộ Time O(n log n), Space O(n). Min heap size k Time O(n log k), Space O(k).
+- Ngày cần làm lại: 2026-07-23
