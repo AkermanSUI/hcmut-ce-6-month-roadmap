@@ -1067,3 +1067,34 @@
 - Pattern: K Closest with Heap
 - Độ phức tạp: Time O(n log k), Space O(k)
 - Ngày cần làm lại: 2026-07-24
+
+## 2026-07-22
+
+### 70. Kth Largest Element in a Stream
+
+- Link: https://leetcode.com/problems/kth-largest-element-in-a-stream/
+- Topic: Heap, Priority Queue, Design
+- Độ khó: Easy
+- Ngày làm: 2026-07-22
+- Trạng thái: Solved
+- Dịch đề: Thiết kế class KthLargest. Mỗi lần thêm một số mới vào stream, trả về phần tử lớn thứ k hiện tại.
+- Ý tưởng: Dùng min heap size k để giữ lại k số lớn nhất. Vì là min heap nên `pq.top()` là số nhỏ nhất trong k số lớn nhất, tức là phần tử lớn thứ k.
+- Lỗi sai / điểm cần nhớ: Phải gán `sizeK = k` trước vòng lặp. Nếu để trong vòng lặp, khi `nums` rỗng thì `sizeK` chưa được gán giá trị.
+- Pattern: Min Heap Size K
+- Độ phức tạp: Constructor O(n log k), add O(log k), Space O(k)
+- Ngày cần làm lại: 2026-07-25
+
+### 71. Relative Ranks
+
+- Link: https://leetcode.com/problems/relative-ranks/
+- Topic: Heap, Priority Queue, Sorting
+- Độ khó: Easy
+- Ngày làm: 2026-07-22
+- Trạng thái: Solved
+- Dịch đề: Cho mảng điểm số, trả về thứ hạng của từng người. Top 1, 2, 3 lần lượt nhận Gold Medal, Silver Medal, Bronze Medal.
+- Ý tưởng: Dùng max heap lưu `{score, index}`. Heap lấy điểm cao nhất trước, còn `index` giúp điền kết quả về đúng vị trí ban đầu.
+- Lỗi sai / điểm cần nhớ: `priority_queue<pair<int,int>>` ưu tiên `.first` trước. Nếu lưu `{score, index}` thì `pq.top().first` là điểm cao nhất, `pq.top().second` là vị trí ban đầu.
+- Pattern: Max Heap Ranking
+- Độ phức tạp: Time O(n log n), Space O(n)
+- Ngày cần làm lại: 2026-07-25
+
