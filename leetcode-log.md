@@ -1036,3 +1036,34 @@
 - Pattern: Kth Element with Heap
 - Độ phức tạp: Max heap toàn bộ Time O(n log n), Space O(n). Min heap size k Time O(n log k), Space O(k).
 - Ngày cần làm lại: 2026-07-23
+
+
+## 2026-07-21
+
+### 68. Top K Frequent Elements
+
+- Link: https://leetcode.com/problems/top-k-frequent-elements/
+- Topic: Hash Table, Heap, Priority Queue
+- Độ khó: Medium
+- Ngày làm: 2026-07-21
+- Trạng thái: Solved
+- Dịch đề: Cho mảng `nums` và số `k`, trả về `k` phần tử xuất hiện nhiều nhất trong mảng.
+- Ý tưởng: Dùng `unordered_map` để đếm tần suất xuất hiện của từng số. Sau đó dùng `priority_queue<pair<int,int>>` để lấy các phần tử có tần suất cao nhất.
+- Lỗi sai / điểm cần nhớ: `priority_queue<pair<int,int>>` ưu tiên `.first` trước. Muốn ưu tiên theo tần suất thì phải push `{count, num}`, sau đó lấy `pq.top().second`.
+- Pattern: Frequency Map + Max Heap
+- Độ phức tạp: Time O(n log n), Space O(n)
+- Ngày cần làm lại: 2026-07-24
+
+### 69. K Closest Points to Origin
+
+- Link: https://leetcode.com/problems/k-closest-points-to-origin/
+- Topic: Array, Math, Heap, Priority Queue
+- Độ khó: Medium
+- Ngày làm: 2026-07-21
+- Trạng thái: Solved
+- Dịch đề: Cho danh sách điểm `[x, y]`, trả về `k` điểm gần gốc tọa độ `(0,0)` nhất.
+- Ý tưởng: Khoảng cách bình phương từ điểm đến gốc là `x*x + y*y`. Dùng max heap size `k` để giữ lại `k` điểm gần nhất. Nếu heap lớn hơn `k`, pop điểm xa nhất ra.
+- Lỗi sai / điểm cần nhớ: Không cần dùng `sqrt`. So sánh `x*x + y*y` là đủ. Với `vector<vector<int>> points`, mỗi `point` là một `vector<int>` gồm `[x, y]`. Có thể dùng `auto point` hoặc tốt hơn là `const auto& point`.
+- Pattern: K Closest with Heap
+- Độ phức tạp: Time O(n log k), Space O(k)
+- Ngày cần làm lại: 2026-07-24
