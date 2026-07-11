@@ -1128,3 +1128,33 @@
 - Pattern: Min Heap with Pair
 - Độ phức tạp: Time O(m*n + m log m), Space O(m)
 - Ngày cần làm lại: 2026-07-26
+
+## 2026-07-24
+
+### 74. Flood Fill
+
+- Link: https://leetcode.com/problems/flood-fill/
+- Topic: BFS, DFS, Matrix, Queue
+- Độ khó: Easy
+- Ngày làm: 2026-07-24
+- Trạng thái: Solved
+- Dịch đề: Cho ma trận `image`, vị trí bắt đầu `(sr, sc)` và màu mới `color`. Đổi màu ô bắt đầu và tất cả ô nối 4 hướng với nó có cùng màu ban đầu.
+- Ý tưởng: Lưu `oldColor = image[sr][sc]`. Dùng BFS với `queue<pair<int,int>>` để lan sang 4 hướng. Nếu ô hàng xóm hợp lệ và có màu `oldColor`, đổi sang `color` và push vào queue.
+- Lỗi sai / điểm cần nhớ: So sánh dùng `==`, gán dùng `=`. `dr` dùng cho row, `dc` dùng cho column. Khi đổi màu phải viết `image[nr][nc] = color`, không phải `==`.
+- Pattern: BFS Matrix Flood Fill
+- Độ phức tạp: Time O(m*n), Space O(m*n)
+- Ngày cần làm lại: 2026-07-27
+
+### 75. Number of Islands
+
+- Link: https://leetcode.com/problems/number-of-islands/
+- Topic: BFS, DFS, Matrix, Queue
+- Độ khó: Medium
+- Ngày làm: 2026-07-24
+- Trạng thái: Solved
+- Dịch đề: Cho ma trận gồm `'1'` là đất và `'0'` là nước. Đếm số lượng hòn đảo, trong đó các ô đất nối nhau theo 4 hướng thuộc cùng một đảo.
+- Ý tưởng: Duyệt toàn bộ ma trận. Khi gặp `'1'`, tăng `countIsland`, rồi dùng BFS để đi hết đảo đó và đổi các ô `'1'` thành `'0'` để đánh dấu đã thăm.
+- Lỗi sai / điểm cần nhớ: `grid` là `char`, nên phải dùng `'1'` và `'0'`, không dùng `1` và `0`. Không đặt trùng tên biến `r`, `c` cho cả kích thước ma trận và vị trí hiện tại.
+- Pattern: BFS Matrix Connected Components
+- Độ phức tạp: Time O(m*n), Space O(m*n)
+- Ngày cần làm lại: 2026-07-27
