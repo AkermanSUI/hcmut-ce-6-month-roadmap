@@ -1098,3 +1098,33 @@
 - Độ phức tạp: Time O(n log n), Space O(n)
 - Ngày cần làm lại: 2026-07-25
 
+
+## 2026-07-23
+
+### 72. Sort Characters By Frequency
+
+- Link: https://leetcode.com/problems/sort-characters-by-frequency/
+- Topic: Hash Table, Heap, Priority Queue, Sorting
+- Độ khó: Medium
+- Ngày làm: 2026-07-23
+- Trạng thái: Solved
+- Dịch đề: Cho chuỗi `s`, hãy sắp xếp các ký tự theo tần suất xuất hiện giảm dần.
+- Ý tưởng: Dùng `unordered_map<char,int>` để đếm tần suất từng ký tự. Sau đó dùng max heap `priority_queue<pair<int,char>>`, push `{count, char}` để lấy ký tự có tần suất cao nhất trước.
+- Lỗi sai / điểm cần nhớ: Với `pair<int,char>`, heap ưu tiên `.first` trước, nên muốn ưu tiên tần suất thì phải để `count` ở `.first`.
+- Pattern: Frequency Map + Max Heap
+- Độ phức tạp: Time O(n log m), Space O(m), với `m` là số ký tự khác nhau.
+- Ngày cần làm lại: 2026-07-26
+
+### 73. The K Weakest Rows in a Matrix
+
+- Link: https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/
+- Topic: Matrix, Heap, Priority Queue, Sorting
+- Độ khó: Easy
+- Ngày làm: 2026-07-23
+- Trạng thái: Solved
+- Dịch đề: Cho ma trận gồm `1` là soldier và `0` là civilian, trả về index của `k` hàng yếu nhất. Hàng yếu hơn là hàng có ít soldier hơn.
+- Ý tưởng: Đếm số soldier của từng hàng, sau đó dùng min heap lưu `{soldiers, index}` để lấy hàng yếu nhất trước.
+- Lỗi sai / điểm cần nhớ: Khi đếm soldier phải kiểm tra `mat[i][j] == 1`, không được `soldiers++` cho mọi phần tử vì sẽ đếm cả số `0`.
+- Pattern: Min Heap with Pair
+- Độ phức tạp: Time O(m*n + m log m), Space O(m)
+- Ngày cần làm lại: 2026-07-26
