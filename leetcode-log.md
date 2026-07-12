@@ -1158,3 +1158,33 @@
 - Pattern: BFS Matrix Connected Components
 - Độ phức tạp: Time O(m*n), Space O(m*n)
 - Ngày cần làm lại: 2026-07-27
+
+## 2026-07-25
+
+### 76. Max Area of Island
+
+- Link: https://leetcode.com/problems/max-area-of-island/
+- Topic: BFS, DFS, Matrix, Queue
+- Độ khó: Medium
+- Ngày làm: 2026-07-25
+- Trạng thái: Solved
+- Dịch đề: Cho ma trận gồm `1` là đất và `0` là nước. Một đảo là nhóm các ô `1` nối nhau theo 4 hướng. Trả về diện tích lớn nhất của một đảo.
+- Ý tưởng: Duyệt toàn bộ ma trận. Khi gặp ô `1`, dùng BFS để đi hết đảo đó, vừa đi vừa đếm `area`. Sau mỗi đảo, cập nhật `maxArea = max(maxArea, area)`.
+- Lỗi sai / điểm cần nhớ: Trong BFS phải kiểm tra ô hàng xóm `grid[nr][nc] == 1`, không phải `grid[i][j] == 1`. `area` là diện tích đảo hiện tại, `maxArea` là diện tích lớn nhất toàn cục.
+- Pattern: BFS Matrix Area Counting
+- Độ phức tạp: Time O(m*n), Space O(m*n)
+- Ngày cần làm lại: 2026-07-28
+
+### 77. Rotting Oranges
+
+- Link: https://leetcode.com/problems/rotting-oranges/
+- Topic: BFS, Matrix, Queue, Multi-source BFS
+- Độ khó: Medium
+- Ngày làm: 2026-07-25
+- Trạng thái: Solved
+- Dịch đề: Cho ma trận gồm `0` là ô trống, `1` là cam tươi, `2` là cam thối. Mỗi phút, cam thối làm thối các cam tươi kề nó theo 4 hướng. Trả về số phút để tất cả cam tươi bị thối, nếu không thể thì trả về `-1`.
+- Ý tưởng: Dùng multi-source BFS. Push tất cả cam thối ban đầu vào queue, đồng thời đếm số cam tươi `fresh`. Mỗi vòng BFS xử lý một lớp, tương ứng một phút. Khi làm thối cam tươi, đổi `1` thành `2`, giảm `fresh`, rồi push vào queue.
+- Lỗi sai / điểm cần nhớ: Không BFS từng quả cam thối riêng lẻ. Phải push tất cả cam thối ban đầu vào queue trước để mô phỏng lan truyền đồng thời. `minutes++` phải tăng theo từng level BFS, không tăng theo từng quả cam. Khi push cam mới, phải đổi ngay `grid[nr][nc] = 2` để tránh bị push lại gây TLE.
+- Pattern: Multi-source BFS / BFS Level Order
+- Độ phức tạp: Time O(m*n), Space O(m*n)
+- Ngày cần làm lại: 2026-07-28
