@@ -1188,3 +1188,33 @@
 - Pattern: Multi-source BFS / BFS Level Order
 - Độ phức tạp: Time O(m*n), Space O(m*n)
 - Ngày cần làm lại: 2026-07-28
+
+## 2026-07-26
+
+### 78. 01 Matrix
+
+- Link: https://leetcode.com/problems/01-matrix/
+- Topic: BFS, Matrix, Queue, Multi-source BFS
+- Độ khó: Medium
+- Ngày làm: 2026-07-26
+- Trạng thái: Solved
+- Dịch đề: Cho ma trận gồm `0` và `1`. Với mỗi ô, trả về khoảng cách từ ô đó đến ô `0` gần nhất.
+- Ý tưởng: Dùng multi-source BFS. Push tất cả ô `0` vào queue trước, đặt `dist[i][j] = 0`. Các ô còn lại để `-1` nghĩa là chưa thăm. Khi BFS lan sang ô mới, gán `dist[nr][nc] = dist[r][c] + 1`.
+- Lỗi sai / điểm cần nhớ: Không nên BFS từ từng ô `1` vì chậm. Phải BFS ngược từ tất cả ô `0`. `dist` vừa lưu kết quả, vừa đánh dấu visited.
+- Pattern: Multi-source BFS Shortest Distance
+- Độ phức tạp: Time O(m*n), Space O(m*n)
+- Ngày cần làm lại: 2026-07-29
+
+### 79. Nearest Exit from Entrance in Maze
+
+- Link: https://leetcode.com/problems/nearest-exit-from-entrance-in-maze/
+- Topic: BFS, Matrix, Queue, Shortest Path
+- Độ khó: Medium
+- Ngày làm: 2026-07-26
+- Trạng thái: Solved
+- Dịch đề: Cho mê cung gồm `'.'` là đường đi và `'+'` là tường. Từ vị trí `entrance`, tìm số bước ít nhất để tới một lối ra ở biên ma trận. Ô entrance không được tính là exit.
+- Ý tưởng: Dùng BFS level-by-level từ entrance. Mỗi level tương ứng với số bước hiện tại. Khi gặp ô biên và `steps > 0`, trả về `steps`.
+- Lỗi sai / điểm cần nhớ: `entrance` là `vector<int>` nên dùng `entrance[0]`, `entrance[1]`, không dùng `.first`. So sánh char phải dùng `'.'`, không phải `"."`. Phải check biên trước khi truy cập `maze[nr][nc]`. Đánh dấu visited bằng cách đổi `'.'` thành `'+'`.
+- Pattern: BFS Shortest Path in Maze
+- Độ phức tạp: Time O(m*n), Space O(m*n)
+- Ngày cần làm lại: 2026-07-29
