@@ -1218,3 +1218,33 @@
 - Pattern: BFS Shortest Path in Maze
 - Độ phức tạp: Time O(m*n), Space O(m*n)
 - Ngày cần làm lại: 2026-07-29
+
+## 2026-07-27
+
+### 80. Find if Path Exists in Graph
+
+- Link: https://leetcode.com/problems/find-if-path-exists-in-graph/
+- Topic: Graph, BFS, DFS, Union Find
+- Độ khó: Easy
+- Ngày làm: 2026-07-27
+- Trạng thái: Solved
+- Dịch đề: Cho `n` node từ `0` đến `n - 1`, danh sách cạnh `edges`, `source` và `destination`. Kiểm tra có đường đi từ `source` tới `destination` hay không.
+- Ý tưởng: Build adjacency list từ `edges`. Vì graph vô hướng nên với cạnh `u - v`, thêm cả `graph[u].push_back(v)` và `graph[v].push_back(u)`. Sau đó BFS từ `source`, nếu gặp `destination` thì trả về `true`.
+- Lỗi sai / điểm cần nhớ: `edges` là edge list nên phải tự build graph trước. Dùng `visited` để tránh đi vòng lặp vô hạn.
+- Pattern: Graph BFS with Adjacency List
+- Độ phức tạp: Time O(n + e), Space O(n + e)
+- Ngày cần làm lại: 2026-07-30
+
+### 81. Number of Provinces
+
+- Link: https://leetcode.com/problems/number-of-provinces/
+- Topic: Graph, BFS, DFS, Union Find
+- Độ khó: Medium
+- Ngày làm: 2026-07-27
+- Trạng thái: Solved
+- Dịch đề: Có `n` thành phố. `isConnected[i][j] == 1` nghĩa là thành phố `i` nối với thành phố `j`. Một province là một nhóm thành phố nối được với nhau. Trả về số lượng province.
+- Ý tưởng: Duyệt từng thành phố. Nếu city chưa visited, tăng `provinces++`, sau đó BFS để thăm hết các thành phố nối với nó.
+- Lỗi sai / điểm cần nhớ: Bài này không phải matrix grid kiểu `rows * cols`. Mỗi thành phố là một node, nên chỉ cần `visited(n, false)`. Queue lưu `int city`, không phải `pair<int,int>`.
+- Pattern: Graph Connected Components
+- Độ phức tạp: Time O(n^2), Space O(n)
+- Ngày cần làm lại: 2026-07-30
