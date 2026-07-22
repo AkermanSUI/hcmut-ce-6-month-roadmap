@@ -1248,3 +1248,33 @@
 - Pattern: Graph Connected Components
 - Độ phức tạp: Time O(n^2), Space O(n)
 - Ngày cần làm lại: 2026-07-30
+
+## 2026-07-28
+
+### 82. Keys and Rooms
+
+- Link: https://leetcode.com/problems/keys-and-rooms/
+- Topic: Graph, BFS, DFS
+- Độ khó: Medium
+- Ngày làm: 2026-07-28
+- Trạng thái: Solved
+- Dịch đề: Có `n` căn phòng, ban đầu chỉ vào được phòng `0`. Mỗi phòng chứa chìa khóa mở các phòng khác. Hỏi có thể vào được tất cả phòng không.
+- Ý tưởng: Xem mỗi phòng là một node, mỗi key là đường đi sang phòng khác. Dùng BFS từ phòng `0`, gặp key nào chưa visited thì đánh dấu và push vào queue.
+- Lỗi sai / điểm cần nhớ: `rooms[room]` là danh sách key trong phòng hiện tại. Queue chỉ lưu `int room`, không phải tọa độ. Cuối cùng phải kiểm tra toàn bộ `visited`.
+- Pattern: Graph Traversal from Source
+- Độ phức tạp: Time O(n + e), Space O(n)
+- Ngày cần làm lại: 2026-07-31
+
+### 83. Is Graph Bipartite?
+
+- Link: https://leetcode.com/problems/is-graph-bipartite/
+- Topic: Graph, BFS, DFS, Coloring
+- Độ khó: Medium
+- Ngày làm: 2026-07-28
+- Trạng thái: Solved
+- Dịch đề: Cho một graph, kiểm tra có thể chia các node thành 2 nhóm sao cho mọi cạnh đều nối giữa hai nhóm khác nhau không.
+- Ý tưởng: Dùng BFS và tô màu graph bằng 2 màu `0` và `1`. Nếu node hiện tại màu `0` thì hàng xóm phải màu `1`, ngược lại. Nếu gặp hai node kề nhau cùng màu thì trả về `false`.
+- Lỗi sai / điểm cần nhớ: Khi tô màu `neighbor`, phải `q.push(neighbor)` để xử lý tiếp các cạnh của nó. `graph[node]` là danh sách hàng xóm của node hiện tại. Dòng `color[neighbor] = 1 - color[node]` dùng để tô màu ngược lại.
+- Pattern: Graph Coloring / Bipartite Check
+- Độ phức tạp: Time O(V + E), Space O(V)
+- Ngày cần làm lại: 2026-07-31
