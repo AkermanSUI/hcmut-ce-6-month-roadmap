@@ -1278,3 +1278,33 @@
 - Pattern: Graph Coloring / Bipartite Check
 - Độ phức tạp: Time O(V + E), Space O(V)
 - Ngày cần làm lại: 2026-07-31
+
+## 2026-07-29
+
+### 84. Course Schedule
+
+- Link: https://leetcode.com/problems/course-schedule/
+- Topic: Graph, BFS, Topological Sort
+- Độ khó: Medium
+- Ngày làm: 2026-07-29
+- Trạng thái: Solved
+- Dịch đề: Có `numCourses` môn học và danh sách điều kiện tiên quyết `prerequisites`. Hỏi có thể học hết tất cả môn không.
+- Ý tưởng: Dùng topological sort BFS. Với mỗi `[course, before]`, tạo cạnh `before -> course` và tăng `indegree[course]`. Các môn có `indegree = 0` được đưa vào queue vì có thể học ngay. Mỗi lần học xong một môn, giảm `indegree` của các môn phía sau nó. Nếu học đủ `numCourses` thì return true.
+- Lỗi sai / điểm cần nhớ: `prerequisites = [course, before]`, nên cạnh là `before -> course`, không phải ngược lại. `indegree[x]` là số môn còn cần học trước môn `x`. Queue chứa các môn hiện tại học được.
+- Pattern: Topological Sort BFS / Cycle Detection
+- Độ phức tạp: Time O(V + E), Space O(V + E)
+- Ngày cần làm lại: 2026-08-01
+
+### 85. Course Schedule II
+
+- Link: https://leetcode.com/problems/course-schedule-ii/
+- Topic: Graph, BFS, Topological Sort
+- Độ khó: Medium
+- Ngày làm: 2026-07-29
+- Trạng thái: Solved
+- Dịch đề: Giống Course Schedule, nhưng cần trả về một thứ tự học hợp lệ. Nếu không thể học hết thì trả về mảng rỗng.
+- Ý tưởng: Vẫn dùng topological sort BFS. Khác bài trước là mỗi course lấy ra khỏi queue thì thêm vào `order`. Nếu `order.size() == numCourses` thì return `order`, ngược lại return `{}`.
+- Lỗi sai / điểm cần nhớ: `order` chính là thứ tự các môn được học. Nếu có cycle, sẽ không có đủ môn vào `order`, nên phải check kích thước cuối cùng.
+- Pattern: Topological Sort Order Construction
+- Độ phức tạp: Time O(V + E), Space O(V + E)
+- Ngày cần làm lại: 2026-08-01
