@@ -1308,3 +1308,33 @@
 - Pattern: Topological Sort Order Construction
 - Độ phức tạp: Time O(V + E), Space O(V + E)
 - Ngày cần làm lại: 2026-08-01
+
+## 2026-07-30
+
+### 86. Subsets
+
+- Link: https://leetcode.com/problems/subsets/
+- Topic: Backtracking, Array, Bit Manipulation
+- Độ khó: Medium
+- Ngày làm: 2026-07-30
+- Trạng thái: Solved
+- Dịch đề: Cho mảng `nums` gồm các phần tử khác nhau, trả về tất cả tập con có thể có.
+- Ý tưởng: Dùng backtracking. Mỗi `path` hiện tại đều là một tập con hợp lệ nên mỗi lần vào hàm đều `res.push_back(path)`. Dùng `start` để chỉ chọn các phần tử phía sau, tránh sinh kết quả trùng.
+- Lỗi sai / điểm cần nhớ: `backtrack(nums, i + 1)` sẽ đi sâu vào nhánh con trước, chạy xong mới quay lại `path.pop_back()`. Với vòng `for`, sau khi xử lý xong `i = 2`, chương trình tự `i++` thành `3`, lúc đó `3 < nums.size()` sai nên vòng lặp kết thúc.
+- Pattern: Backtracking / Choose - Explore - Unchoose
+- Độ phức tạp: Time O(n * 2^n), Space O(n)
+- Ngày cần làm lại: 2026-08-02
+
+### 87. Permutations
+
+- Link: https://leetcode.com/problems/permutations/
+- Topic: Backtracking, Array
+- Độ khó: Medium
+- Ngày làm: 2026-07-30
+- Trạng thái: Solved
+- Dịch đề: Cho mảng `nums` gồm các số khác nhau, trả về tất cả hoán vị có thể có.
+- Ý tưởng: Dùng backtracking. Mỗi vị trí trong `path` chọn một số chưa dùng. Dùng `used[i]` để đánh dấu `nums[i]` đã nằm trong `path` hay chưa. Khi `path.size() == nums.size()`, lưu `path` vào `res`.
+- Lỗi sai / điểm cần nhớ: Khác với Subsets, Permutations phải dùng đủ tất cả phần tử nên chỉ lưu đáp án khi `path` đủ độ dài. Vì mỗi lần có thể chọn bất kỳ số nào chưa dùng, vòng `for` chạy từ `0`, không dùng `start`.
+- Pattern: Backtracking with Used Array
+- Độ phức tạp: Time O(n * n!), Space O(n)
+- Ngày cần làm lại: 2026-08-02
