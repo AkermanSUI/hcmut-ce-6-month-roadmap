@@ -1338,3 +1338,33 @@
 - Pattern: Backtracking with Used Array
 - Độ phức tạp: Time O(n * n!), Space O(n)
 - Ngày cần làm lại: 2026-08-02
+
+## 2026-07-31
+
+### 88. Combination Sum
+
+- Link: https://leetcode.com/problems/combination-sum/
+- Topic: Backtracking, Array
+- Độ khó: Medium
+- Ngày làm: 2026-07-31
+- Trạng thái: Solved
+- Dịch đề: Cho mảng `candidates` và số `target`, trả về tất cả tổ hợp các số sao cho tổng bằng `target`. Mỗi số trong `candidates` có thể được dùng nhiều lần.
+- Ý tưởng: Dùng backtracking với `path`, `start`, và `target còn lại`. Nếu `target == 0` thì lưu `path`. Nếu `target < 0` thì dừng nhánh. Truyền `i` thay vì `i + 1` vì bài cho phép dùng lại cùng một phần tử nhiều lần.
+- Lỗi sai / điểm cần nhớ: `target` trong hàm không còn là target ban đầu, mà là số còn thiếu. Nếu được dùng lại phần tử hiện tại thì gọi `backtrack(..., i, ...)`; nếu không được dùng lại thì gọi `backtrack(..., i + 1, ...)`.
+- Pattern: Backtracking with Remaining Target
+- Độ phức tạp: Time O(2^target) tùy input, Space O(target)
+- Ngày cần làm lại: 2026-08-03
+
+### 89. Generate Parentheses
+
+- Link: https://leetcode.com/problems/generate-parentheses/
+- Topic: Backtracking, String
+- Độ khó: Medium
+- Ngày làm: 2026-07-31
+- Trạng thái: Solved
+- Dịch đề: Cho số `n`, tạo tất cả chuỗi ngoặc đúng gồm `n` cặp ngoặc.
+- Ý tưởng: Dùng backtracking để xây chuỗi từ trái sang phải. Dùng `open` để đếm số dấu `'('` đã dùng, `close` để đếm số dấu `')'` đã dùng. Thêm `'('` nếu `open < n`. Thêm `')'` nếu `close < open`. Khi `path.size() == 2*n`, lưu chuỗi vào `res`.
+- Lỗi sai / điểm cần nhớ: Không dùng `open++` hoặc `close++` trong lời gọi đệ quy vì post-increment truyền giá trị cũ. Dùng `open + 1` hoặc `close + 1`. Nếu dùng `path + "("` thì không cần `pop_back()` vì tạo chuỗi mới. Nếu dùng `path.push_back(...)` thì phải `path.pop_back()`.
+- Pattern: Backtracking with Valid State Constraint
+- Độ phức tạp: Time O(4^n / sqrt(n)), Space O(n)
+- Ngày cần làm lại: 2026-08-03
