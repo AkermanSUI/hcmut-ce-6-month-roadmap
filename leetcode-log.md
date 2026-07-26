@@ -1398,3 +1398,33 @@
 - Pattern: 1D Dynamic Programming / Min Cost
 - Độ phức tạp: Time O(n), Space O(n)
 - Ngày cần làm lại: 2026-08-04
+
+## 2026-08-02
+
+### 92. House Robber
+
+- Link: https://leetcode.com/problems/house-robber/
+- Topic: Dynamic Programming, Array
+- Độ khó: Medium
+- Ngày làm: 2026-08-02
+- Trạng thái: Solved
+- Dịch đề: Cho một dãy nhà, mỗi nhà có số tiền `nums[i]`. Không được cướp hai nhà liền kề. Hỏi số tiền lớn nhất có thể cướp.
+- Ý tưởng: Dùng DP chọn hoặc không chọn. Gọi `dp[i]` là số tiền lớn nhất có thể cướp từ nhà `0` đến nhà `i`. Nếu không cướp nhà `i` thì lấy `dp[i-1]`. Nếu cướp nhà `i` thì lấy `dp[i-2] + nums[i]`.
+- Lỗi sai / điểm cần nhớ: Khi chọn nhà hiện tại thì không được chọn nhà liền trước. Công thức: `dp[i] = max(dp[i-1], dp[i-2] + nums[i])`.
+- Pattern: Dynamic Programming / Choose or Skip
+- Độ phức tạp: Time O(n), Space O(n)
+- Ngày cần làm lại: 2026-08-05
+
+### 93. Maximum Subarray
+
+- Link: https://leetcode.com/problems/maximum-subarray/
+- Topic: Dynamic Programming, Array
+- Độ khó: Medium
+- Ngày làm: 2026-08-02
+- Trạng thái: Solved
+- Dịch đề: Cho mảng số nguyên `nums`, tìm tổng lớn nhất của một đoạn con liên tiếp.
+- Ý tưởng: Gọi `dp[i]` là tổng lớn nhất của đoạn con liên tiếp kết thúc tại vị trí `i`. Tại `i`, có hai lựa chọn: bắt đầu đoạn mới từ `nums[i]`, hoặc nối `nums[i]` vào đoạn trước.
+- Lỗi sai / điểm cần nhớ: Đáp án không nhất thiết là `dp[n-1]`, vì đoạn con tốt nhất có thể kết thúc ở bất kỳ vị trí nào. Cần dùng biến `ans` để lưu giá trị lớn nhất trong quá trình duyệt.
+- Pattern: Dynamic Programming / Kadane’s Algorithm
+- Độ phức tạp: Time O(n), Space O(n)
+- Ngày cần làm lại: 2026-08-05
