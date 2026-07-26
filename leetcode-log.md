@@ -1368,3 +1368,33 @@
 - Pattern: Backtracking with Valid State Constraint
 - Độ phức tạp: Time O(4^n / sqrt(n)), Space O(n)
 - Ngày cần làm lại: 2026-08-03
+
+## 2026-08-01
+
+### 90. Climbing Stairs
+
+- Link: https://leetcode.com/problems/climbing-stairs/
+- Topic: Dynamic Programming
+- Độ khó: Easy
+- Ngày làm: 2026-08-01
+- Trạng thái: Solved
+- Dịch đề: Cho `n` bậc cầu thang. Mỗi lần có thể leo 1 hoặc 2 bậc. Hỏi có bao nhiêu cách khác nhau để leo tới bậc `n`.
+- Ý tưởng: Dùng DP. Gọi `dp[i]` là số cách để leo tới bậc `i`. Muốn tới bậc `i`, có thể đi từ `i-1` hoặc `i-2`, nên `dp[i] = dp[i-1] + dp[i-2]`.
+- Lỗi sai / điểm cần nhớ: Cần xác định rõ `dp[i]` có ý nghĩa gì trước khi viết công thức. Base case: `dp[1] = 1`, `dp[2] = 2`.
+- Pattern: 1D Dynamic Programming
+- Độ phức tạp: Time O(n), Space O(n)
+- Ngày cần làm lại: 2026-08-04
+
+### 91. Min Cost Climbing Stairs
+
+- Link: https://leetcode.com/problems/min-cost-climbing-stairs/
+- Topic: Dynamic Programming, Array
+- Độ khó: Easy
+- Ngày làm: 2026-08-01
+- Trạng thái: Solved
+- Dịch đề: Cho mảng `cost`, trong đó `cost[i]` là chi phí khi bước lên bậc `i`. Mỗi lần có thể leo 1 hoặc 2 bậc. Có thể bắt đầu từ bậc 0 hoặc bậc 1. Hỏi chi phí nhỏ nhất để leo tới đỉnh.
+- Ý tưởng: Dùng DP. Gọi `dp[i]` là chi phí nhỏ nhất để tới vị trí `i`. Đỉnh cầu thang là vị trí `n`, không có `cost[n]`. Muốn tới `i`, có thể đi từ `i-1` hoặc `i-2`, nên lấy chi phí nhỏ hơn.
+- Lỗi sai / điểm cần nhớ: Không có `cost[n]`. `cost` chỉ có index từ `0` đến `n-1`. Công thức đúng là `dp[i] = min(dp[i-1] + cost[i-1], dp[i-2] + cost[i-2])`.
+- Pattern: 1D Dynamic Programming / Min Cost
+- Độ phức tạp: Time O(n), Space O(n)
+- Ngày cần làm lại: 2026-08-04
