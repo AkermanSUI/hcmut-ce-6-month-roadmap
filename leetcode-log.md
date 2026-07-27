@@ -1428,3 +1428,33 @@
 - Pattern: Dynamic Programming / Kadane’s Algorithm
 - Độ phức tạp: Time O(n), Space O(n)
 - Ngày cần làm lại: 2026-08-05
+
+## 2026-08-03
+
+### 94. Unique Paths
+
+- Link: https://leetcode.com/problems/unique-paths/
+- Topic: Dynamic Programming, Math, Combinatorics
+- Độ khó: Medium
+- Ngày làm: 2026-08-03
+- Trạng thái: Solved
+- Dịch đề: Robot đứng ở góc trên bên trái của bảng `m x n`, muốn đi tới góc dưới bên phải. Mỗi lần chỉ được đi sang phải hoặc đi xuống. Hỏi có bao nhiêu đường đi khác nhau.
+- Ý tưởng: Dùng DP 2D. Gọi `dp[i][j]` là số cách đi tới ô `(i, j)`. Muốn tới ô `(i, j)`, chỉ có thể đi từ ô phía trên hoặc ô bên trái.
+- Lỗi sai / điểm cần nhớ: Hàng đầu tiên và cột đầu tiên đều có đúng 1 cách đi tới. Công thức: `dp[i][j] = dp[i-1][j] + dp[i][j-1]`.
+- Pattern: 2D Dynamic Programming / Grid Paths
+- Độ phức tạp: Time O(m*n), Space O(m*n)
+- Ngày cần làm lại: 2026-08-06
+
+### 95. Minimum Path Sum
+
+- Link: https://leetcode.com/problems/minimum-path-sum/
+- Topic: Dynamic Programming, Array, Matrix
+- Độ khó: Medium
+- Ngày làm: 2026-08-03
+- Trạng thái: Solved
+- Dịch đề: Cho ma trận `grid`, mỗi ô có một số không âm. Bắt đầu từ góc trên bên trái, đi tới góc dưới bên phải. Mỗi lần chỉ được đi sang phải hoặc đi xuống. Hỏi tổng nhỏ nhất trên đường đi là bao nhiêu.
+- Ý tưởng: Dùng DP 2D. Gọi `dp[i][j]` là tổng nhỏ nhất để đi tới ô `(i, j)`. Muốn tới ô hiện tại, chỉ có thể đi từ ô trên hoặc ô trái, nên lấy đường có tổng nhỏ hơn rồi cộng giá trị ô hiện tại.
+- Lỗi sai / điểm cần nhớ: Cần khởi tạo riêng `dp[0][0]`, hàng đầu tiên và cột đầu tiên. Công thức: `dp[i][j] = grid[i][j] + min(dp[i-1][j], dp[i][j-1])`.
+- Pattern: 2D Dynamic Programming / Grid Min Path
+- Độ phức tạp: Time O(m*n), Space O(m*n)
+- Ngày cần làm lại: 2026-08-06
