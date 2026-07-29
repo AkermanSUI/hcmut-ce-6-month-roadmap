@@ -1458,3 +1458,33 @@
 - Pattern: 2D Dynamic Programming / Grid Min Path
 - Độ phức tạp: Time O(m*n), Space O(m*n)
 - Ngày cần làm lại: 2026-08-06
+
+## 2026-08-04
+
+### 96. Coin Change
+
+- Link: https://leetcode.com/problems/coin-change/
+- Topic: Dynamic Programming, Array
+- Độ khó: Medium
+- Ngày làm: 2026-08-04
+- Trạng thái: Solved
+- Dịch đề: Cho mảng `coins` và số `amount`, tìm số đồng xu ít nhất để tạo ra đúng tổng `amount`. Mỗi loại xu có thể dùng vô hạn lần. Nếu không thể tạo được thì trả về `-1`.
+- Ý tưởng: Dùng DP theo tổng. Gọi `dp[i]` là số đồng xu ít nhất để tạo tổng `i`. Với mỗi tổng `i`, thử từng đồng `coin`. Nếu dùng đồng `coin`, phần còn lại cần tạo là `i - coin`, nên cập nhật `dp[i] = min(dp[i], dp[i-coin] + 1)`.
+- Lỗi sai / điểm cần nhớ: `amount + 1` được dùng như giá trị giả vô cực vì nếu tạo được `amount`, số xu thật sự không thể lớn hơn `amount`. Nếu sau khi thử hết mà `dp[amount] == amount + 1`, nghĩa là không tạo được tổng đó.
+- Pattern: Dynamic Programming / Unbounded Coin Change
+- Độ phức tạp: Time O(amount * coins.size()), Space O(amount)
+- Ngày cần làm lại: 2026-08-07
+
+### 97. Longest Increasing Subsequence
+
+- Link: https://leetcode.com/problems/longest-increasing-subsequence/
+- Topic: Dynamic Programming, Array
+- Độ khó: Medium
+- Ngày làm: 2026-08-04
+- Trạng thái: Solved
+- Dịch đề: Cho mảng `nums`, tìm độ dài dãy con tăng dài nhất. Dãy con không cần liên tiếp nhưng phải giữ đúng thứ tự ban đầu.
+- Ý tưởng: Dùng DP. Gọi `dp[i]` là độ dài dãy tăng dài nhất kết thúc tại vị trí `i`. Với mỗi `i`, nhìn tất cả `j < i`. Nếu `nums[j] < nums[i]`, có thể nối `nums[i]` sau dãy tăng kết thúc tại `j`.
+- Lỗi sai / điểm cần nhớ: Không phải lấy tất cả số nhỏ hơn `nums[i]` để ghép thành một dãy. Ta thử từng vị trí `j` trước `i`; nếu nối được thì cập nhật `dp[i] = max(dp[i], dp[j] + 1)`. Đáp án là max của toàn bộ `dp[i]`, không nhất thiết nằm ở cuối mảng.
+- Pattern: Dynamic Programming / LIS O(n²)
+- Độ phức tạp: Time O(n²), Space O(n)
+- Ngày cần làm lại: 2026-08-07
