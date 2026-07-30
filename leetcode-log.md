@@ -1488,3 +1488,33 @@
 - Pattern: Dynamic Programming / LIS O(n²)
 - Độ phức tạp: Time O(n²), Space O(n)
 - Ngày cần làm lại: 2026-08-07
+
+## 2026-08-05
+
+### 98. Word Break
+
+- Link: https://leetcode.com/problems/word-break/
+- Topic: Dynamic Programming, String, Hash Table
+- Độ khó: Medium
+- Ngày làm: 2026-08-05
+- Trạng thái: Solved
+- Dịch đề: Cho chuỗi `s` và danh sách từ `wordDict`, kiểm tra xem có thể tách `s` thành các từ hợp lệ trong `wordDict` hay không.
+- Ý tưởng: Dùng DP trên chuỗi. Gọi `dp[i]` là `true` nếu `i` ký tự đầu tiên của `s` có thể tách được. Với mỗi `i`, thử mọi điểm cắt `j`. Nếu `dp[j] == true` và `s.substr(j, i-j)` có trong `wordDict`, thì `dp[i] = true`.
+- Lỗi sai / điểm cần nhớ: `dp[0] = true` vì chuỗi rỗng là điểm bắt đầu hợp lệ. `s.substr(j, i-j)` lấy đoạn từ vị trí `j` đến `i-1`. Dùng `unordered_set` để kiểm tra từ nhanh hơn.
+- Pattern: Dynamic Programming / String Segmentation
+- Độ phức tạp: Time O(n² * k), Space O(n)
+- Ngày cần làm lại: 2026-08-08
+
+### 99. Decode Ways
+
+- Link: https://leetcode.com/problems/decode-ways/
+- Topic: Dynamic Programming, String
+- Độ khó: Medium
+- Ngày làm: 2026-08-05
+- Trạng thái: Solved
+- Dịch đề: Cho chuỗi chữ số, đếm số cách giải mã theo quy tắc `1 -> A`, `2 -> B`, ..., `26 -> Z`.
+- Ý tưởng: Dùng DP trên chuỗi. Gọi `dp[i]` là số cách giải mã `i` ký tự đầu tiên. Tại mỗi vị trí, xét 1 ký tự cuối và 2 ký tự cuối. Nếu 1 ký tự cuối hợp lệ thì cộng `dp[i-1]`. Nếu 2 ký tự cuối nằm trong `[10,26]` thì cộng `dp[i-2]`.
+- Lỗi sai / điểm cần nhớ: Số `0` không thể đứng một mình. `"0"` và `"06"` sai, nhưng `"10"` và `"20"` đúng. Phải xét 2 ký tự cuối vì một chữ cái có thể được mã hóa bởi số từ `10` đến `26`. Không cần xét 3 ký tự vì bảng mã chỉ tới `26`.
+- Pattern: Dynamic Programming / Decode String
+- Độ phức tạp: Time O(n), Space O(n)
+- Ngày cần làm lại: 2026-08-08
