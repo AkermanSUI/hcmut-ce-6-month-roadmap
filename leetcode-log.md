@@ -1518,3 +1518,33 @@
 - Pattern: Dynamic Programming / Decode String
 - Độ phức tạp: Time O(n), Space O(n)
 - Ngày cần làm lại: 2026-08-08
+
+## 2026-08-02 - Extra Practice
+
+## 2026-08-02 - Extra Practice
+
+### Extra 01. Palindrome Number (LeetCode 9)
+
+- Link: https://leetcode.com/problems/palindrome-number/
+- Topic: Math
+- Độ khó: Easy
+- Ngày làm: 2026-08-02
+- Trạng thái: Solved
+- Dịch đề: Cho một số nguyên `x`, kiểm tra xem `x` có phải là số đối xứng hay không. Một số là palindrome nếu đọc từ trái sang phải và từ phải sang trái đều giống nhau.
+- Ý tưởng: Có thể chuyển số sang `string`, sau đó dùng hai con trỏ `left` và `right` để so sánh hai đầu. Nếu có cặp ký tự khác nhau thì trả về `false`, nếu duyệt hết thì trả về `true`.
+- Lỗi sai / điểm cần nhớ: Số âm không phải palindrome vì có dấu `-`. Ví dụ `-121` đọc ngược không còn giống ban đầu. Nếu dùng cách đảo số bằng toán học thì cần cẩn thận overflow, còn dùng string thì dễ hiểu hơn.
+- Pattern: Two Pointers / Math
+- Độ phức tạp: Time O(n), Space O(n)
+
+### Extra 02. Container With Most Water (LeetCode 11)
+
+- Link: https://leetcode.com/problems/container-with-most-water/
+- Topic: Array, Two Pointers, Greedy
+- Độ khó: Medium
+- Ngày làm: 2026-08-02
+- Trạng thái: Solved
+- Dịch đề: Cho mảng `height`, mỗi phần tử biểu diễn chiều cao của một cột. Chọn hai cột sao cho cùng với trục ngang tạo thành một vùng chứa nước lớn nhất. Trả về diện tích lớn nhất đó.
+- Ý tưởng: Dùng hai con trỏ `left` và `right`. Diện tích được tính bằng khoảng cách giữa hai cột nhân với chiều cao nhỏ hơn trong hai cột. Sau mỗi lần tính, di chuyển con trỏ ở phía có chiều cao nhỏ hơn để hy vọng tìm được chiều cao tốt hơn.
+- Lỗi sai / điểm cần nhớ: `right` phải bắt đầu từ `n - 1`, không phải `n`, vì index cuối của mảng là `n - 1`. Chiều cao chứa nước phải là `min(height[left], height[right])`, không phải `max`, vì nước chỉ giữ được tới mức của cột thấp hơn.
+- Pattern: Two Pointers / Greedy
+- Độ phức tạp: Time O(n), Space O(1)
