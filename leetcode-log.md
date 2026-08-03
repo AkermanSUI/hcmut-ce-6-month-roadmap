@@ -1548,3 +1548,31 @@
 - Lỗi sai / điểm cần nhớ: `right` phải bắt đầu từ `n - 1`, không phải `n`, vì index cuối của mảng là `n - 1`. Chiều cao chứa nước phải là `min(height[left], height[right])`, không phải `max`, vì nước chỉ giữ được tới mức của cột thấp hơn.
 - Pattern: Two Pointers / Greedy
 - Độ phức tạp: Time O(n), Space O(1)
+
+## 2026-08-03 - Extra Practice
+
+### Extra 03. Integer to Roman (LeetCode 12)
+
+- Link: https://leetcode.com/problems/integer-to-roman/
+- Topic: Hash Table, Math, String
+- Độ khó: Medium
+- Ngày làm: 2026-08-03
+- Trạng thái: Solved
+- Dịch đề: Cho một số nguyên `num`, chuyển số đó sang dạng chữ số La Mã.
+- Ý tưởng: Dùng greedy. Tạo hai mảng song song gồm giá trị số và ký hiệu La Mã tương ứng, ví dụ `1000 -> M`, `900 -> CM`, `500 -> D`, `400 -> CD`. Duyệt từ giá trị lớn xuống nhỏ, nếu `num >= value[i]` thì thêm `roman[i]` vào kết quả và trừ `value[i]` khỏi `num`.
+- Lỗi sai / điểm cần nhớ: Phải có các trường hợp đặc biệt như `900`, `400`, `90`, `40`, `9`, `4`, vì chữ số La Mã dùng quy tắc trừ. Trong vòng `for`, không được tự tăng `i` thêm lần nữa bên trong nếu không cần, vì có thể bỏ sót ký hiệu. Dùng `while (num >= value[i])` để xử lý trường hợp một ký hiệu được lặp nhiều lần.
+- Pattern: Greedy / Value Mapping
+- Độ phức tạp: Time O(1), Space O(1)
+
+### Extra 04. Roman to Integer (LeetCode 13)
+
+- Link: https://leetcode.com/problems/roman-to-integer/
+- Topic: Hash Table, Math, String
+- Độ khó: Easy
+- Ngày làm: 2026-08-03
+- Trạng thái: Solved
+- Dịch đề: Cho một chuỗi chữ số La Mã `s`, chuyển chuỗi đó thành số nguyên.
+- Ý tưởng: Dùng bảng map để đổi từng ký tự La Mã sang giá trị số. Duyệt chuỗi từ trái sang phải. Nếu giá trị hiện tại nhỏ hơn giá trị ký tự phía sau thì trừ giá trị hiện tại, ngược lại thì cộng vào kết quả.
+- Lỗi sai / điểm cần nhớ: Các trường hợp như `IV`, `IX`, `XL`, `XC`, `CD`, `CM` được xử lý bằng quy tắc: nếu ký tự hiện tại nhỏ hơn ký tự kế tiếp thì trừ. Khi kiểm tra `s[i+1]`, cần cẩn thận không vượt quá giới hạn mảng.
+- Pattern: Hash Map / String Traversal
+- Độ phức tạp: Time O(n), Space O(1)
