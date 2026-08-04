@@ -1576,3 +1576,31 @@
 - Lỗi sai / điểm cần nhớ: Các trường hợp như `IV`, `IX`, `XL`, `XC`, `CD`, `CM` được xử lý bằng quy tắc: nếu ký tự hiện tại nhỏ hơn ký tự kế tiếp thì trừ. Khi kiểm tra `s[i+1]`, cần cẩn thận không vượt quá giới hạn mảng.
 - Pattern: Hash Map / String Traversal
 - Độ phức tạp: Time O(n), Space O(1)
+
+## 2026-08-04 - Extra Practice
+
+### Extra 05. Longest Common Prefix (LeetCode 14)
+
+- Link: https://leetcode.com/problems/longest-common-prefix/
+- Topic: String
+- Độ khó: Easy
+- Ngày làm: 2026-08-04
+- Trạng thái: Solved
+- Dịch đề: Cho một mảng các chuỗi, tìm tiền tố chung dài nhất của tất cả các chuỗi. Nếu không có tiền tố chung thì trả về chuỗi rỗng.
+- Ý tưởng: Lấy chuỗi đầu tiên làm `prefix`, sau đó so sánh với từng chuỗi còn lại. Nếu chuỗi hiện tại không bắt đầu bằng `prefix`, thì rút ngắn `prefix` dần cho tới khi khớp.
+- Lỗi sai / điểm cần nhớ: Cần xử lý trường hợp mảng rỗng nếu đề cho phép. Khi dùng `substr`, phải chú ý độ dài prefix không vượt quá độ dài chuỗi hiện tại.
+- Pattern: String Comparison / Prefix Shrinking
+- Độ phức tạp: Time O(n * m), Space O(1)
+
+### Extra 06. 3Sum (LeetCode 15)
+
+- Link: https://leetcode.com/problems/3sum/
+- Topic: Array, Two Pointers, Sorting
+- Độ khó: Medium
+- Ngày làm: 2026-08-04
+- Trạng thái: Solved
+- Dịch đề: Cho mảng số nguyên `nums`, tìm tất cả bộ ba `[nums[i], nums[j], nums[k]]` sao cho `i`, `j`, `k` khác nhau và tổng của ba số bằng `0`. Kết quả không được chứa bộ ba trùng lặp.
+- Ý tưởng: Sắp xếp mảng trước. Duyệt từng vị trí `i`, sau đó dùng hai con trỏ `left = i + 1` và `right = n - 1` để tìm hai số còn lại sao cho tổng bằng `0`.
+- Lỗi sai / điểm cần nhớ: Phải bỏ qua giá trị trùng ở `i` để tránh sinh bộ ba trùng. Sau khi tìm được một bộ ba hợp lệ, cần tiếp tục bỏ qua các giá trị trùng ở `left` và `right`. Vì mảng đã sort, nếu `sum < 0` thì tăng `left`, nếu `sum > 0` thì giảm `right`.
+- Pattern: Sorting + Two Pointers
+- Độ phức tạp: Time O(n²), Space O(1) nếu không tính mảng kết quả
