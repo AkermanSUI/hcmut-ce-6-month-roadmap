@@ -1604,3 +1604,18 @@
 - Lỗi sai / điểm cần nhớ: Phải bỏ qua giá trị trùng ở `i` để tránh sinh bộ ba trùng. Sau khi tìm được một bộ ba hợp lệ, cần tiếp tục bỏ qua các giá trị trùng ở `left` và `right`. Vì mảng đã sort, nếu `sum < 0` thì tăng `left`, nếu `sum > 0` thì giảm `right`.
 - Pattern: Sorting + Two Pointers
 - Độ phức tạp: Time O(n²), Space O(1) nếu không tính mảng kết quả
+
+## 2026-08-05 - Extra Practice
+
+### Extra 07. 3Sum Closest (LeetCode 16)
+
+- Link: https://leetcode.com/problems/3sum-closest/
+- Topic: Array, Two Pointers, Sorting
+- Độ khó: Medium
+- Ngày làm: 2026-08-05
+- Trạng thái: Solved
+- Dịch đề: Cho mảng `nums` và số `target`, tìm tổng của 3 số trong mảng sao cho tổng đó gần `target` nhất. Trả về tổng gần nhất đó.
+- Ý tưởng: Sắp xếp mảng trước. Duyệt từng vị trí `i`, sau đó dùng hai con trỏ `left = i + 1` và `right = n - 1` để tìm tổng gần `target` nhất. Mỗi lần tính `sum = nums[i] + nums[left] + nums[right]`, nếu khoảng cách `abs(sum - target)` nhỏ hơn kết quả hiện tại thì cập nhật đáp án.
+- Lỗi sai / điểm cần nhớ: Phải cập nhật đáp án dựa trên khoảng cách tới `target`, không phải dựa trên tổng lớn hay nhỏ. Nếu `sum < target` thì tăng `left` để tổng lớn hơn. Nếu `sum > target` thì giảm `right` để tổng nhỏ hơn. Nếu `sum == target` thì có thể trả về luôn vì đã gần nhất tuyệt đối.
+- Pattern: Sorting + Two Pointers
+- Độ phức tạp: Time O(n²), Space O(1) nếu không tính chi phí sort
