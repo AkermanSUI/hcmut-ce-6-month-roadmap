@@ -1619,3 +1619,61 @@
 - Lỗi sai / điểm cần nhớ: Phải cập nhật đáp án dựa trên khoảng cách tới `target`, không phải dựa trên tổng lớn hay nhỏ. Nếu `sum < target` thì tăng `left` để tổng lớn hơn. Nếu `sum > target` thì giảm `right` để tổng nhỏ hơn. Nếu `sum == target` thì có thể trả về luôn vì đã gần nhất tuyệt đối.
 - Pattern: Sorting + Two Pointers
 - Độ phức tạp: Time O(n²), Space O(1) nếu không tính chi phí sort
+
+## 2026-08-06
+
+### 100. Longest Common Subsequence (LeetCode 1143)
+
+- Link: https://leetcode.com/problems/longest-common-subsequence/
+- Topic: Dynamic Programming, String
+- Độ khó: Medium
+- Ngày làm: 2026-08-06
+- Trạng thái: Solved
+- Dịch đề: Cho hai chuỗi `text1` và `text2`, tìm độ dài dãy con chung dài nhất của hai chuỗi. Dãy con không cần liên tiếp nhưng phải giữ đúng thứ tự.
+- Ý tưởng: Dùng DP 2D. Gọi `dp[i][j]` là độ dài LCS của `i` ký tự đầu của `text1` và `j` ký tự đầu của `text2`. Nếu hai ký tự cuối giống nhau thì lấy kết quả chéo trái trên cộng 1. Nếu khác nhau thì bỏ một ký tự ở một trong hai chuỗi và lấy kết quả tốt hơn.
+- Lỗi sai / điểm cần nhớ: `dp` có kích thước `(m + 1) x (n + 1)` để có hàng/cột đại diện cho chuỗi rỗng. Khi xét ký tự thật trong string phải dùng `text1[i - 1]` và `text2[j - 1]`.
+- Pattern: 2D Dynamic Programming / Longest Common Subsequence
+- Độ phức tạp: Time O(m*n), Space O(m*n)
+- Ngày cần làm lại: 2026-08-09
+
+### 101. Uncrossed Lines (LeetCode 1035)
+
+- Link: https://leetcode.com/problems/uncrossed-lines/
+- Topic: Dynamic Programming, Array
+- Độ khó: Medium
+- Ngày làm: 2026-08-06
+- Trạng thái: Solved
+- Dịch đề: Cho hai mảng `nums1` và `nums2`. Có thể nối hai phần tử bằng nhau giữa hai mảng, nhưng mỗi phần tử chỉ được dùng một lần và các đường nối không được cắt nhau. Hỏi số đường nối nhiều nhất có thể vẽ.
+- Ý tưởng: Bài này giống Longest Common Subsequence nhưng áp dụng trên hai mảng số. Gọi `dp[i][j]` là số đường nối tối đa giữa `i` phần tử đầu của `nums1` và `j` phần tử đầu của `nums2`.
+- Lỗi sai / điểm cần nhớ: Nếu `nums1[i - 1] == nums2[j - 1]` thì nối được một đường, dùng `dp[i-1][j-1] + 1`. Nếu khác nhau thì lấy `max(dp[i-1][j], dp[i][j-1])`.
+- Pattern: 2D Dynamic Programming / LCS on Arrays
+- Độ phức tạp: Time O(m*n), Space O(m*n)
+- Ngày cần làm lại: 2026-08-09
+
+## 2026-08-06 - Extra Practice
+
+### Extra 08. Letter Combinations of a Phone Number (LeetCode 17)
+
+- Link: https://leetcode.com/problems/letter-combinations-of-a-phone-number/
+- Topic: Hash Table, String, Backtracking
+- Độ khó: Medium
+- Ngày làm: 2026-08-06
+- Trạng thái: Solved
+- Dịch đề: Cho một chuỗi chữ số từ `2` đến `9`, trả về tất cả tổ hợp chữ cái có thể tạo ra theo bàn phím điện thoại.
+- Ý tưởng: Dùng backtracking. Tạo bảng map từ chữ số sang các chữ cái tương ứng, ví dụ `2 -> abc`, `3 -> def`. Mỗi bước xử lý một chữ số trong `digits`, thử từng chữ cái có thể có, thêm vào `path`, rồi đi tiếp sang chữ số kế tiếp.
+- Lỗi sai / điểm cần nhớ: Khi `digits` rỗng thì phải trả về mảng rỗng. Đây là bài backtracking dạng chọn một ký tự cho mỗi vị trí, không dùng `start` như Subsets.
+- Pattern: Backtracking / Phone Keypad Mapping
+- Độ phức tạp: Time O(4^n * n), Space O(n)
+
+### Extra 09. 4Sum (LeetCode 18)
+
+- Link: https://leetcode.com/problems/4sum/
+- Topic: Array, Two Pointers, Sorting
+- Độ khó: Medium
+- Ngày làm: 2026-08-06
+- Trạng thái: Solved
+- Dịch đề: Cho mảng `nums` và số `target`, tìm tất cả bộ bốn phần tử khác nhau sao cho tổng bằng `target`. Kết quả không được chứa bộ bốn trùng lặp.
+- Ý tưởng: Sắp xếp mảng trước. Dùng hai vòng lặp để cố định hai số đầu, sau đó dùng hai con trỏ `left` và `right` để tìm hai số còn lại. Nếu tổng nhỏ hơn `target` thì tăng `left`, nếu lớn hơn thì giảm `right`, nếu bằng thì lưu kết quả.
+- Lỗi sai / điểm cần nhớ: Phải bỏ qua giá trị trùng ở cả hai vòng lặp ngoài và sau khi tìm được một bộ hợp lệ. Nên dùng `long long` khi tính tổng để tránh overflow với input lớn.
+- Pattern: Sorting + Two Pointers / K-Sum
+- Độ phức tạp: Time O(n^3), Space O(1) nếu không tính mảng kết quả
