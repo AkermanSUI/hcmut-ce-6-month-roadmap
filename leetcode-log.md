@@ -1705,3 +1705,57 @@
 - Lỗi sai / điểm cần nhớ: Không được thêm `)` nếu số dấu đóng đã bằng hoặc lớn hơn số dấu mở. Nếu dùng `str + '('` hoặc `str + ')'` thì không cần `pop_back()` vì mỗi lần gọi hàm tạo ra một string mới.
 - Pattern: Backtracking / Constrained Generation
 - Độ phức tạp: Time O(4^n / sqrt(n)), Space O(n)
+
+## 2026-08-11 - Extra Practice
+
+### Extra 12. Swap Nodes in Pairs (LeetCode 24)
+
+- Link: https://leetcode.com/problems/swap-nodes-in-pairs/
+- Topic: Linked List, Recursion
+- Độ khó: Medium
+- Ngày làm: 2026-08-11
+- Trạng thái: Solved
+- Dịch đề: Cho một linked list, hãy đổi chỗ từng cặp node liền kề. Không được chỉ đổi giá trị trong node, mà phải đổi liên kết giữa các node.
+- Ý tưởng: Dùng dummy node để xử lý dễ hơn ở đầu list. Với mỗi cặp `first` và `second`, đổi liên kết để `second` đứng trước `first`, sau đó di chuyển con trỏ sang cặp tiếp theo.
+- Lỗi sai / điểm cần nhớ: Đây là bài đổi node thật, không phải đổi `val`. Cần lưu node tiếp theo của cặp trước khi đổi để không mất phần còn lại của list.
+- Pattern: Linked List / Pointer Manipulation / Dummy Node
+- Độ phức tạp: Time O(n), Space O(1)
+
+### Extra 13. Remove Duplicates from Sorted Array (LeetCode 26)
+
+- Link: https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+- Topic: Array, Two Pointers
+- Độ khó: Easy
+- Ngày làm: 2026-08-11
+- Trạng thái: Solved
+- Dịch đề: Cho một mảng đã được sắp xếp tăng dần, hãy xóa các phần tử trùng lặp tại chỗ sao cho mỗi giá trị chỉ xuất hiện một lần. Trả về số lượng phần tử khác nhau.
+- Ý tưởng: Dùng con trỏ `k` để đánh dấu vị trí ghi phần tử hợp lệ tiếp theo. Duyệt mảng, nếu gặp giá trị mới khác giá trị trước đó thì ghi vào `nums[k]` và tăng `k`.
+- Lỗi sai / điểm cần nhớ: Không cần thật sự xóa phần tử khỏi vector. LeetCode chỉ kiểm tra `k` phần tử đầu tiên của mảng sau khi sửa.
+- Pattern: Two Pointers / In-place Array
+- Độ phức tạp: Time O(n), Space O(1)
+
+### Extra 14. Remove Element (LeetCode 27)
+
+- Link: https://leetcode.com/problems/remove-element/
+- Topic: Array, Two Pointers
+- Độ khó: Easy
+- Ngày làm: 2026-08-11
+- Trạng thái: Solved
+- Dịch đề: Cho mảng `nums` và giá trị `val`, hãy xóa tất cả phần tử bằng `val` tại chỗ. Trả về số lượng phần tử còn lại không bằng `val`.
+- Ý tưởng: Dùng con trỏ `k` để ghi lại các phần tử khác `val`. Nếu `nums[i] != val` thì gán `nums[k] = nums[i]` rồi tăng `k`.
+- Lỗi sai / điểm cần nhớ: Không cần quan tâm các phần tử sau vị trí `k - 1`. LeetCode chỉ kiểm tra `k` phần tử đầu.
+- Pattern: Two Pointers / In-place Array
+- Độ phức tạp: Time O(n), Space O(1)
+
+### Extra 15. Find the Index of the First Occurrence in a String (LeetCode 28)
+
+- Link: https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/
+- Topic: Two Pointers, String, String Matching
+- Độ khó: Easy
+- Ngày làm: 2026-08-11
+- Trạng thái: Solved
+- Dịch đề: Cho hai chuỗi `haystack` và `needle`, trả về vị trí xuất hiện đầu tiên của `needle` trong `haystack`. Nếu `needle` không xuất hiện thì trả về `-1`.
+- Ý tưởng: Duyệt từng vị trí có thể bắt đầu trong `haystack`, sau đó kiểm tra xem đoạn con tại đó có bằng `needle` không.
+- Lỗi sai / điểm cần nhớ: Chỉ cần duyệt tới `haystack.size() - needle.size()`. Nếu duyệt quá xa sẽ dễ bị vượt chỉ số. Có thể dùng `substr`, nhưng cần hiểu độ dài đoạn cắt.
+- Pattern: String Matching / Brute Force
+- Độ phức tạp: Time O(n*m), Space O(1)
