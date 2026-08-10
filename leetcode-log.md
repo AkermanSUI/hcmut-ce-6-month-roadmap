@@ -1677,3 +1677,31 @@
 - Lỗi sai / điểm cần nhớ: Phải bỏ qua giá trị trùng ở cả hai vòng lặp ngoài và sau khi tìm được một bộ hợp lệ. Nên dùng `long long` khi tính tổng để tránh overflow với input lớn.
 - Pattern: Sorting + Two Pointers / K-Sum
 - Độ phức tạp: Time O(n^3), Space O(1) nếu không tính mảng kết quả
+
+## 2026-08-08 - Extra Practice
+
+### Extra 10. Merge Two Sorted Lists (LeetCode 21)
+
+- Link: https://leetcode.com/problems/merge-two-sorted-lists/
+- Topic: Linked List, Recursion
+- Độ khó: Easy
+- Ngày làm: 2026-08-08
+- Trạng thái: Solved
+- Dịch đề: Cho hai linked list đã được sắp xếp tăng dần, hãy gộp chúng thành một linked list mới cũng được sắp xếp tăng dần.
+- Ý tưởng: Dùng dummy node và con trỏ `current`. So sánh giá trị hiện tại của `list1` và `list2`, node nào nhỏ hơn thì nối vào sau `current`, sau đó di chuyển con trỏ tương ứng. Khi một list hết, nối phần còn lại của list kia vào.
+- Lỗi sai / điểm cần nhớ: Sau khi nối node vào `current->next`, phải di chuyển `current = current->next`. Cuối cùng trả về `dummy->next`, không trả về `dummy`.
+- Pattern: Linked List / Two Pointers / Dummy Node
+- Độ phức tạp: Time O(m+n), Space O(1)
+
+### Extra 11. Generate Parentheses (LeetCode 22)
+
+- Link: https://leetcode.com/problems/generate-parentheses/
+- Topic: String, Backtracking
+- Độ khó: Medium
+- Ngày làm: 2026-08-08
+- Trạng thái: Solved
+- Dịch đề: Cho số nguyên `n`, sinh ra tất cả các chuỗi ngoặc hợp lệ gồm `n` cặp dấu ngoặc.
+- Ý tưởng: Dùng backtracking. Biến `open` đếm số dấu `(` đã dùng, biến `close` đếm số dấu `)` đã dùng. Có thể thêm `(` nếu `open < n`. Có thể thêm `)` nếu `close < open`. Khi độ dài chuỗi bằng `2*n` thì lưu vào kết quả.
+- Lỗi sai / điểm cần nhớ: Không được thêm `)` nếu số dấu đóng đã bằng hoặc lớn hơn số dấu mở. Nếu dùng `str + '('` hoặc `str + ')'` thì không cần `pop_back()` vì mỗi lần gọi hàm tạo ra một string mới.
+- Pattern: Backtracking / Constrained Generation
+- Độ phức tạp: Time O(4^n / sqrt(n)), Space O(n)
